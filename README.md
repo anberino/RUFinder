@@ -1,1 +1,6 @@
-# mac0218grupo6
+# Projeto MAC0218 - Grupo 6
+
+Eduardo Nascimento
+Gabriel Sarti
+Larissa Goto
+Matheus Lima
