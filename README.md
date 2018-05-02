@@ -15,7 +15,7 @@ Feito com Ruby on Rails.
 
 # Entregas:
 
-__- Fase 1:__  Modelos dos bancos de dados, CRUD básicos, esqueleto do site (htmls da ṕágina inicial e formulários de acesso ao banco de dados)  
+__- Fase 1:__  Modelos dos bancos de dados, CRUD básicos, esqueleto do site (htmls da página inicial e formulários de acesso ao banco de dados)  
 
 __- Fase 2:__  Adicionar as principais funcionalidades propostas pelo nosso site: avaliar as refeições, comentários e sugestões
 
