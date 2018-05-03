@@ -15,10 +15,12 @@ Feito com Ruby on Rails.
 
 # Como instalar e executar o projeto em ambiente de desenvolvimento:
 
-Para executar o projeto é necessário possuir o banco de dados __PostgreSQL (9.5.12)__ e o framework __Rails (5.1.6)__ e a pasta com todos os arquivos do nosso projeto __RU Finder__ , além disso também é necessário possuir __Ruby (2.4.1)__ .
-Feito isso, executar os seguintes comandos no terminal, dentro da pasta rufinder, para instalar as dependências do nosso projeto (encontradas no arquivo __Gemfile__):
+Para executar o projeto é necessário possuir o banco de dados __PostgreSQL (9.5.12)__ , o framework __Rails (5.1.6)__ e a pasta com todos os arquivos do nosso projeto __RU Finder__ , além disso também é necessário possuir __Ruby (2.4.1)__ .
+Feito isso, executar o seguinte comando no terminal, dentro da pasta rufinder, para instalar as dependências do nosso projeto (encontradas no arquivo __Gemfile__):
 
 `bundle install`
+
+E o seguinte para inicializar o servidor local:
 
 `rails server`
 
