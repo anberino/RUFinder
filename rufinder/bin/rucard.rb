@@ -19,11 +19,12 @@ def main()
 		puts ""
 		if(card.length>1)
 			card.each_with_index do |x,index|
-				x.gsub!(/\\+?\//,'/')				#Tranforma \\/ em /
-				x.gsub!(/\\+u(.{4})/) do |match|	#Transforma \uXXXX em char
-					[$1.hex].pack('U*')
-				end
-				puts "#{index} : #{x}"
+				x.gsub!(/\\+?\//,'/')								#Tranforma \\/ em /
+				x.gsub!(/\\+u(.{4})/) {|match| [$1.hex].pack('U*')}	#Transforma \u0000 em chars
+				x.gsub!(/Opção: /,'')								#Tira o Opção
+				y = x.split(/\s*\/\s*/)								#Separa as comidas em /
+				y.each {|com| puts "#{index} : #{com}"}				#Imprime tudo
+				
 			end
 		else
 			puts "Fechado"
@@ -38,10 +39,10 @@ def main()
 		if(card.length>1)
 			card.each_with_index do |x,index|
 				x.gsub!(/\\+?\//,'/')
-				x.gsub!(/\\+u(.{4})/) do |match|
-					[$1.hex].pack('U*')
-				end
-				puts "#{index} : #{x}"
+				x.gsub!(/\\+u(.{4})/) {|match| [$1.hex].pack('U*')}
+				x.gsub!(/Opção: /,'')
+				y = x.split(/\s*\/\s*/)
+				y.each {|com| puts "#{index} : #{com}"}
 			end
 		else
 			puts "Fechado"
