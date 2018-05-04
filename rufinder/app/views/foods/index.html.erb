@@ -1,0 +1,19 @@
+<h1> Comidas cadastradas: </h1>
+<table>
+
+  <tr>
+    <th> Nome </th>
+    <th> Categoria </th>
+    <th> Restaurante </th>
+  </tr>
+
+  <% @foods.each do |f|%>
+    <tr>
+      <td><%=f.name%></td>
+      <td><%=f.category%></td>
+      <% x = Restaurant.find(f.restaurant_id) %>
+      <td><%=x.name%></td>
+    </tr>
+  <% end %>
+
+</table>

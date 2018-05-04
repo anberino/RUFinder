@@ -22,4 +22,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :login
+
+  resources :foods
+  resources :reviews
 end

@@ -1,0 +1,25 @@
+<h1> Reviews feitas: </h1>
+<table>
+
+  <tr>
+    <th> Usuário </th>
+    <th> Comida </th>
+    <th> Restaurante </th>
+    <th> Nota </th>
+    <th> Comentário </th>
+  </tr>
+
+  <% @reviews.each do |r|%>
+    <tr>
+      <% u = User.find(r.user_id) %>
+      <td><%=u.name%></td>
+      <% f = Food.find(r.food_id) %>
+      <td><%=f.name%></td>
+      <% x = Restaurant.find(f.restaurant_id) %>
+      <td><%=x.name%></td>
+      <td><%=r.rating%></td>
+      <td><%=r.comment%></td>
+    </tr>
+  <% end %>
+
+</table>
