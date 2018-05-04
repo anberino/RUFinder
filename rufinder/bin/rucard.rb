@@ -1,7 +1,7 @@
-require "Date"
+require "date"
 
 def main()
-	cdp = `python3 getjão.py 9`
+	cdp = `python3 bin/getjão.py 9`
 
 	cdp.slice!(/.+,\[\{/)
 
