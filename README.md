@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Projeto MAC0218 - Grupo 6 - "RU Finder"
 
 Eduardo Nascimento , @Eduwzin
@@ -38,3 +39,29 @@ __- Fase 3:__ Estilização do site (CSS), possível adição de funcionalidades
 
 #### Master branch build status: 
 ![](https://travis-ci.org/lordanb/mac0218grupo6.svg?branch=master)
+=======
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+>>>>>>> 0b4ba6f40090b0fb78b2d7c8956761ae5369728e
