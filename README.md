@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Projeto MAC0218 - Grupo 6 - "RU Finder"
 
 Eduardo Nascimento , @Eduwzin
@@ -20,6 +19,10 @@ Para executar o projeto é necessário possuir o banco de dados __PostgreSQL (9.
 Feito isso, executar o seguinte comando no terminal, dentro da pasta rufinder, para instalar as dependências do nosso projeto (encontradas no arquivo __Gemfile__):
 
 `bundle install`
+
+Para criar os databases do __PostgreSQL__ de teste e desenvolvimento e , em seguida, as tabelas execute:
+
+`rails db:create` e `rails db:migrate`
 
 E o seguinte para inicializar o servidor local:
 
