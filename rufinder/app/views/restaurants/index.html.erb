@@ -1,0 +1,16 @@
+<h1> Comidas cadastradas: </h1>
+<table>
+
+  <tr>
+    <th> Nome </th>
+    <th> Local </th>
+  </tr>
+
+  <% @restaurants.each do |r|%>
+    <tr>
+      <td><%=r.name %></td>
+      <td><%=r.location %></td>
+    </tr>
+  <% end %>
+
+</table>
