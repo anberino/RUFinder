@@ -16,8 +16,6 @@ Rails.application.routes.draw do
 
   root to: "home#show"
 
-  get 'login/index'
-
   post 'users/new', to: 'users#create'
 
   resources :users

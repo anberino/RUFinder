@@ -1,5 +1,9 @@
 class ReviewsController < ApplicationController
   def index
-    @reviews = Review.all
+  	if(current_user)
+    	@reviews = Review.all
+    else
+    	redirect_to root_path
+    end
   end
 end

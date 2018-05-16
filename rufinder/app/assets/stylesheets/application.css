@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.menu{
+
+	background-color:#f0f0f5;
+	width:100%;
+	min-height: 25px;
+	height: 4%;
+}
