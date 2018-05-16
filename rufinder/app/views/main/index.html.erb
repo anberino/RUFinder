@@ -1,0 +1,69 @@
+<% require 'date' %>
+<a href=foods>Comidas</a>
+<a href=restaurants>Restaurantes</a>
+<a href=reviews>Reviews</a>
+<a href="">Amigos (não implementado ainda)</a>
+
+<% date = Date.today %>
+
+<br><h1> Almoço: </h1></br>
+
+<table>
+
+  <tr>
+    <th> Central </th>
+    <th> Física </th>
+    <th> Química </th>
+    <th> Prefeitura (PCO) </th>
+  </tr>
+
+  <% @records.each do |r|%>
+    <% if r.meal == "Almoço" && r.date == date %>
+    <tr>
+      <% food = Food.find(r.food_id) %>
+      <% rid = food.restaurant_id %>
+      <% if rid == 1%>
+        <td><%=food.name%></td>
+      <% elsif rid == 2 %>
+        <th></th><td><%=food.name%></td>
+      <% elsif rid == 3 %>
+        <th></th><th></th><td><%=food.name%></td>
+      <% elsif rid == 4 %>
+        <th></th><th></th><th></th><td><%=food.name%></td>
+      <% end %>
+    </tr>
+    <% end %>
+  <% end %>
+
+</table>
+
+<br><h1> Janta: </h1></br>
+
+<table>
+
+  <tr>
+    <th> Central </th>
+    <th> Física </th>
+    <th> Química </th>
+    <th> Prefeitura (PCO) </th>
+  </tr>
+
+  <% @records.each do |r|%>
+    <% if r.meal == "Janta" && r.date == date %>
+    <tr>
+      <% food = Food.find(r.food_id) %>
+      <% rid = food.restaurant_id %>
+      <% if rid == 1%>
+        <td><%=food.name%></td>
+      <% elsif rid == 2 %>
+        <th></th><td><%=food.name%></td>
+      <% elsif rid == 3 %>
+        <th></th><th></th><td><%=food.name%></td>
+      <% elsif rid == 4 %>
+        <th></th><th></th><th></th><td><%=food.name%></td>
+      <% end %>
+    </tr>
+    <% end %>
+  <% end %>
+
+</table>

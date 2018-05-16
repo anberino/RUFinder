@@ -1,0 +1,19 @@
+<h1> Refeições por dia: </h1>
+<table>
+
+  <tr>
+    <th> Data </th>
+    <th> Refeição </th>
+    <th> Comida </th>
+  </tr>
+
+  <% @records.each do |r|%>
+    <tr>
+      <td><%=r.date%></td>
+      <td><%=r.meal%></td>
+      <% x = Food.find(r.food_id) %>
+      <td><%=x.name%></td>
+    </tr>
+  <% end %>
+
+</table>
