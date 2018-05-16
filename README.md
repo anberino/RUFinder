@@ -40,8 +40,7 @@ __- Fase 2:__  Adicionar as principais funcionalidades propostas pelo nosso site
 
 __- Fase 3:__ Estilização do site (CSS), possível adição de funcionalidades extras, toques finais e correções de erros
 
-#### Master branch build status: 
-![](https://travis-ci.org/lordanb/mac0218grupo6.svg?branch=master)
+
 =======
 # README
 
