@@ -9,8 +9,24 @@
   <body>
     <div class="menu">
       <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <div class="name">
+          <strong><a href=main><%= current_user.name %></a></strong>
+      </div>
+      <div class="button">
+        <%= link_to "Sair", signout_path, id: "sign_out" %>
+      </div>
+      <div class="button">
+        <a href=reviews>Reviews</a>
+      </div>
+      <div class="button">
+        Amigos
+      </div>
+      <div class="button">
+        <a href=restaurants>Restaurantes</a>
+      </div>
+      <div class="button">
+        <a href=foods>Comidas</a>
+      </div>
       <% end %>
     </div>
     <div>

@@ -15,9 +15,37 @@
  */
 
 .menu{
-
-	background-color:#f0f0f5;
+	background-color:#c1c1d7;
 	width:100%;
-	min-height: 25px;
+	min-height: 30px;
 	height: 4%;
+}
+
+.name{
+	left: 0.5%;
+	margin-top: 0.5%;
+	position:relative;	
+	float: left;
+}
+
+.button{
+	
+	position:relative;
+	float: right;
+
+	margin-top: 0.3%;
+	margin-left: 1%;
+	right: 1%;
+	height: 80%;
+	min-width: 100px;
+	width: 10%;	
+	
+	background-color:#f0f0f5;
+
+	text-align: center;
+	line-height: 170%;
+}
+
+.button:hover{
+	background-color:#ffffff;
 }

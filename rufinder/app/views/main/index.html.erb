@@ -1,9 +1,4 @@
 <% require 'date' %>
-<a href=foods>Comidas</a>
-<a href=restaurants>Restaurantes</a>
-<a href=reviews>Reviews</a>
-<a href="">Amigos (não implementado ainda)</a>
-
 <% date = Date.today %>
 
 <br><h1> Almoço: </h1></br>
@@ -17,7 +12,7 @@
     <th> Prefeitura (PCO) </th>
   </tr>
 
-  <% @records.each do |r|%>
+  <% @records.where(meal: "Almoço").find_each do |r|%>
     <% if r.meal == "Almoço" && r.date == date %>
     <tr>
       <% food = Food.find(r.food_id) %>
