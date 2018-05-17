@@ -11,7 +11,7 @@
     <div class="menu">
       <% if current_user %>
       <div class="name">
-          <%= link_to current_user.name, root_path, id: "main"%>
+          <%= link_to current_user.name, root_url, id: "main"%>
       </div>
       <div class="button">
         <%= link_to "Sair", signout_path, id: "sign_out" %>
