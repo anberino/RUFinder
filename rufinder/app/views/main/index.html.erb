@@ -12,23 +12,37 @@
     <th> Prefeitura (PCO) </th>
   </tr>
 
-  <% @records.where(meal: "Almoço").find_each do |r|%>
-    <% if r.meal == "Almoço" && r.date == date %>
-    <tr>
-      <% food = Food.find(r.food_id) %>
-      <% rid = food.restaurant_id %>
-      <% if rid == 1%>
-        <td><%=food.name%></td>
-      <% elsif rid == 2 %>
-        <th></th><td><%=food.name%></td>
-      <% elsif rid == 3 %>
-        <th></th><th></th><td><%=food.name%></td>
-      <% elsif rid == 4 %>
-        <th></th><th></th><th></th><td><%=food.name%></td>
-      <% end %>
-    </tr>
-    <% end %>
+  <% bandeja = Array.new()  %>
+  <% nota = Array.new()     %>
+  <% 0.upto(3) do |i|       %>
+    <% bandeja[i] = Array.new() %>
+    <% nota[i] = 0 %>
   <% end %>
+
+  <% @records.where(meal: "Almoço").where(date: date).find_each do |r|  %>
+    <%  food = Food.find(r.food_id)                                     %>
+    <%  bandeja[food.restaurant_id-1].push(food.name)                     %>
+    <%  review = Review.where(food_id: food.id).first                   %>
+    <%  nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating if !review.nil?%>
+    <% end %>
+    <tr>
+      <% if bandeja[0].size > 1 && nota.max ==  nota[0] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[0].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[1].size > 1 && nota.max ==  nota[1] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[1].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[2].size > 1 && nota.max ==  nota[2] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[2].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[3].size > 1 && nota.max ==  nota[3] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[3].each do |f| %><%= f %><br><% end %></td>
+    </tr>
+
 
 </table>
 
@@ -43,22 +57,36 @@
     <th> Prefeitura (PCO) </th>
   </tr>
 
-  <% @records.each do |r|%>
-    <% if r.meal == "Janta" && r.date == date %>
-    <tr>
-      <% food = Food.find(r.food_id) %>
-      <% rid = food.restaurant_id %>
-      <% if rid == 1%>
-        <td><%=food.name%></td>
-      <% elsif rid == 2 %>
-        <th></th><td><%=food.name%></td>
-      <% elsif rid == 3 %>
-        <th></th><th></th><td><%=food.name%></td>
-      <% elsif rid == 4 %>
-        <th></th><th></th><th></th><td><%=food.name%></td>
-      <% end %>
-    </tr>
-    <% end %>
+  <% bandeja = Array.new()  %>
+  <% nota = Array.new()     %>
+  <% 0.upto(3) do |i|       %>
+    <% bandeja[i] = Array.new() %>
+    <% nota[i] = 0 %>
   <% end %>
 
+  <% @records.where(meal: "Janta").where(date: date).find_each do |r|  %>
+    <%  food = Food.find(r.food_id)                                     %>
+    <%  bandeja[food.restaurant_id-1].push(food.name)                     %>
+    <%  review = Review.where(food_id: food.id).first                   %>
+    <%  nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating if !review.nil?%>
+    <% end %>
+    <tr>
+      <% if bandeja[0].size > 1 && nota.max ==  nota[0] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[0].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[1].size > 1 && nota.max ==  nota[1] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[1].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[2].size > 1 && nota.max ==  nota[2] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[2].each do |f| %><%= f %><br><% end %></td>
+
+      <% if bandeja[3].size > 1 && nota.max ==  nota[3] %> <td class="best">
+      <% else %>                              <td>                                   <%end%>
+      <% bandeja[3].each do |f| %><%= f %><br><% end %></td>
+    </tr>
+
 </table>
+<br><br><br>

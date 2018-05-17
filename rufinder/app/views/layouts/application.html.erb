@@ -1,6 +1,7 @@
 <!DOCTYPE html5>
 <html>
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>RUFinder</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -10,7 +11,7 @@
     <div class="menu">
       <% if current_user %>
       <div class="name">
-          <strong><a href=main><%= current_user.name %></a></strong>
+          <%= link_to current_user.name, root_path, id: "main"%>
       </div>
       <div class="button">
         <%= link_to "Sair", signout_path, id: "sign_out" %>

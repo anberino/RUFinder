@@ -7,3 +7,4 @@ rufinder/tmp/pids/server.pid
 rufinder/tmp/pids/server.pid
 *.pid
 *.pid
+*.pid
