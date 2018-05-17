@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   resources :reviews
   resources :restaurants
   resources :records
+  resources :friends
 end
