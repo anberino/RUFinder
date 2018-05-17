@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   post 'users/new', to: 'users#create'
-
+  post 'reviews/new', to: 'reviews#create'
   resources :users
   resources :login
   resources :main

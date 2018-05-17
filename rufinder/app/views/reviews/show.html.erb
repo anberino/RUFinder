@@ -1,0 +1,28 @@
+<a href=foods>Comidas</a>
+<a href=restaurants>Restaurantes</a>
+<a href=reviews>Reviews</a>
+<a href="">Amigos (não implementado ainda)</a>
+
+<h1> Avaliações feitas: </h1>
+<table>
+
+  <tr>
+    <th> Usuario </th>
+    <th> Comida </th>
+    <th> Comentários </th>
+    <th> Nota </th>
+
+  </tr>
+
+  <% @reviews.each do |r|%>
+    <tr>
+      <td><%=User.find(r.user_id).name %></td>
+      <td><%=Food.find(r.food_id).name %></td>
+      <td><%= r.comment %></td>
+      <td><%= r.rating %></td>
+    </tr>
+  <% end %>
+
+</table>
+
+<a href=main>Voltar</a>
