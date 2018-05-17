@@ -1,15 +1,24 @@
 class ReviewsController < ApplicationController
   def index
     if(current_user)
-    	@reviews = Review.all
+        @reviews = Review.all
     else
     	redirect_to root_path
     end
   end
 
   def new
-        @food = Food.find(params[:food_id])
-	@review = Review.new
+    @food = Food.find(params[:food_id])
+    @reviews = Review.find_by(food_id: @food.id ,user_id: current_user.id)
+	if (!@reviews.nil?)
+		redirect_to action: 'edit', id: @reviews.id
+    end
+    @review = Review.new
+  end
+
+  def edit
+	@review = Review.find(params[:id]) 
+	@food = Food.find(@review.food_id)	
   end
 
   def create
