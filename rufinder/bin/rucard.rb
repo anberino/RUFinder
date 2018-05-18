@@ -9,6 +9,9 @@ def main()
 
 	meal = ["Almoço", "Janta"]
 	cat = ["Básico", "Carne", "PVT", "Acompanhamento", "Salada", "Sobremesa", "Básico"]
+
+	seeds = open(Dir.pwd + "/db/seeds.rb", "a")
+
 	[6,7,8,9].each do |i|
 		cdp = `python3 bin/getjão.py #{i.to_s}`
 
@@ -33,9 +36,22 @@ def main()
 						com.capitalize!
 						com.gsub!("Pvt", "PVT")
 						com.gsub!("pvt", "PVT")
-						f = Food.find_by(name:com, restaurant_id: rest[i])
-						f ||= Food.create(name:com, category:cat[index] ,restaurant_id: rest[i])
-						Record.create(date:data, meal:meal[0], food_id:f.id)
+						com.rstrip!
+
+						f = Food.find_by(name: com, restaurant_id: rest[i])
+						if f.nil?
+							f = Food.create(name:com, category:cat[index] ,restaurant_id: rest[i])
+							seeds.puts "Food.create(name:\"#{com}\", category:\"#{cat[index]}\",restaurant_id:\"#{rest[i]}\")"
+							puts "Criando nova comida #{com} no restaurante #{rest[i]}"
+						end
+
+						r = Record.find_by(date:data, meal:meal[0], food_id:f.id)
+						if(r.nil?)
+							Record.create(date:data, meal:meal[0], food_id:f.id)
+							seeds.puts "Record.create(date:\"#{data}\", meal:\"#{meal[0]}\", food_id:\"#{f.id}\")\n\n"
+							puts "Criando novo resgistro de #{com} no restaurante #{rest[i]} como #{meal[0]} em #{data}\n\n"
+						end
+
 					end				
 				end
 			end
@@ -56,16 +72,28 @@ def main()
 						com.capitalize!
 						com.gsub!("Pvt", "PVT")
 						com.gsub!("pvt", "PVT")
+
 						f = Food.find_by(name:com, restaurant_id: rest[i])
-						f ||= Food.create(name:com, category:cat[index], restaurant_id: rest[i])
-						Record.create(date:data, meal:meal[1], food_id:f.id)
+						if f.nil?
+							f = Food.create(name:com, category:cat[index] ,restaurant_id: rest[i])
+							seeds.puts "Food.create(name:\"#{com}\", category:\"#{cat[index]}\",restaurant_id:\"#{rest[i]}\")"
+							puts "Criando nova comida #{com} no restaurante #{rest[i]}"
+						end
+
+						r = Record.find_by(date:data, meal:meal[1], food_id:f.id)
+						if(r.nil?)
+							Record.create(date:data, meal:meal[1], food_id:f.id)
+							seeds.puts "Record.create(date:\"#{data}\", meal:\"#{meal[1]}\", food_id:\"#{f.id}\")\n\n"
+							puts "Criando novo resgistro de #{com} no restaurante #{rest[i]} como #{meal[1]} em #{data}\n\n"
+						end
+
 					end
 				end
 			end
 
 			cdp.slice!(/.+?,\{/)
 		end
-	end
+	end 
 end
 
 main()
