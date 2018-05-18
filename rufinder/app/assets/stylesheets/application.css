@@ -17,6 +17,11 @@
 html{
 	background-color:#edffff;
 	font-family: "Palatino Linotype";
+	text-align: center;
+}
+
+table{
+	text-align: center;
 }
 
 .menu{
