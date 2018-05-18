@@ -14,8 +14,13 @@
  *= require_self
  */
 
+html{
+	background-color:#edffff;
+	font-family: "Palatino Linotype";
+}
+
 .menu{
-	background-color:#c1c1d7;
+	background-color:#cceeff;
 
 	padding-top: 1%;
 	padding-bottom: 1%;
@@ -27,9 +32,18 @@
 }
 
 .name{
-	left: 0.5%;
+
 	position:relative;	
 	float: left;
+
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+    padding-right: 0.2%;
+    padding-left: 0.2%;
+
+	left: 0.5%;
+
+	text-align: center;
 }
 
 .button{
@@ -48,11 +62,11 @@
 	min-width: 100px;
 	width: 10%;	
 	
-	background-color:#f0f0f5;
+	background-color:#ffffff;
 
 	text-align: center;
 }
 
 .button:hover{
-	background-color:#ffffff;
+	background-color:#ffffe6;
 }
