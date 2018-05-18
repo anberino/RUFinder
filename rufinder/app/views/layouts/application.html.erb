@@ -8,6 +8,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <% if !flash.empty? %>
+		<% flash.each do |type,message| %>
+      <div class="notice"><%= message %></div>
+		<% end %>
+    <% end %>
     <div class="menu">
       <% if current_user %>
       <div class="name">
@@ -33,5 +38,6 @@
     <div>
     <%= yield %>
     </div>
+	<%= debug(params) if Rails.env.development? %>
   </body>
 </html>

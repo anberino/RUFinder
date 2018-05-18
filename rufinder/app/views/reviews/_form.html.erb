@@ -1,4 +1,4 @@
-<%= form_for(@review, url: reviews_new_path) do |form| %>
+<%= form_for(@review) do |form| %>
   <% if @review.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@review.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,9 +11,7 @@
     </div>
   <% end %>
 
-  <!-- Antigo select
-  <%= select('review' , :food_id , Food.all.collect{|food| [food.name , food.id] }) %>
-   !-->
+
   Avaliando <%=@food.name %> da(o) <%= Restaurant.find(@food.restaurant_id).name %>
   <div class="field">
     <%= form.label :comentario %>

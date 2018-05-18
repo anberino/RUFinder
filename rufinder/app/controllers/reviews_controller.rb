@@ -17,8 +17,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-	@review = Review.find(params[:id]) 
-	@food = Food.find(@review.food_id)	
+	@review = Review.find(params[:id])
+	if current_user.id != @review.user_id
+		flash[:notice] = "Sai fora porra"
+		redirect_to root_url
+	else
+		@food = Food.find(@review.food_id)	
+	end
   end
 
   def create
@@ -29,20 +34,22 @@ class ReviewsController < ApplicationController
         format.html { redirect_to @review, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @review }
       else
-        format.html { render :new }
+		@food = Food.find(@review.food_id)
+        format.html { render action: :new }
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
   end
   
   def update
-    @review = Review.new(review_params)
+    @review = Review.find(params[:id])
     respond_to do |format|
-      if @review.save
+      if @review.update(review_params)
         format.html { redirect_to @review, notice: 'Review was successfully updated.' }
-        format.json { render :show, status: :created, location: @review }
+        format.json { render :show, status: :updated, location: @review }
       else
-        format.html { render :new }
+		@food = Food.find(@review.food_id)
+        format.html { render 'edit'}
         format.json { render json: @review.errors, status: :unprocessable_entity }
 	  end
 	end
