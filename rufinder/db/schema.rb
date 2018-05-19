@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180516235649) do
+ActiveRecord::Schema.define(version: 20180519032710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 20180516235649) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["restaurant_id"], name: "index_foods_on_restaurant_id"
-  end
-
-  create_table "friends", force: :cascade do |t|
-    t.integer "sender_id"
-    t.integer "receiver_id"
-    t.boolean "status", default: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "records", force: :cascade do |t|
@@ -67,6 +59,7 @@ ActiveRecord::Schema.define(version: 20180516235649) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
   end
 
   add_foreign_key "foods", "restaurants"

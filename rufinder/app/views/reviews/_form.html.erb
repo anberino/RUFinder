@@ -1,0 +1,63 @@
+<%= form_for(@review) do |form| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  Avaliando <%=@food.name %> da(o) <%= Restaurant.find(@food.restaurant_id).name %>
+  <div class="field">
+    <%= form.label :comentario %>
+    <%= form.text_area :comment, id: :review_comment %>
+  </div>
+
+  <!--  Passando o id do usuario corrente para o user_id reviews !-->
+  <%= form.hidden_field :user_id, id: :review_user ,value: current_user.id %>
+  <%= form.hidden_field :food_id, id: :review_food ,value: @food.id %>
+  <div class ="rating">
+
+    <%= radio_button_tag :rating, "10", false ,id: "star5", name: "review[rating]"  %>
+    <%= label_tag :star5, "", class: "full", for: "star5" %>
+
+    <%= radio_button_tag :rating, "9", false ,id: "star4half", name: "review[rating]" %>
+    <%= label_tag :star4half, "", class: "half", for: "star4half" %>
+
+    <%= radio_button_tag :rating, "8", false ,id: "star4", name: "review[rating]"  %>
+    <%= label_tag :star4, "", class: "full", for: "star4" %>
+
+    <%= radio_button_tag :rating, "7", false ,id: "star3half", name: "review[rating]"  %>
+    <%= label_tag :star3half, "", class: "half", for: "star3half" %>
+
+    <%= radio_button_tag :rating, "6", false ,id: "star3", name: "review[rating]"  %>
+    <%= label_tag :star3, "", class: "full", for: "star3" %>
+
+    <%= radio_button_tag :rating, "5", false ,id: "star2half", name: "review[rating]"  %>
+    <%= label_tag :star2half, "", class: "half", for: "star2half" %>
+
+    <%= radio_button_tag :rating, "4", false ,id: "star2", name: "review[rating]"  %>
+    <%= label_tag :star2, "", class: "full", for: "star2" %>
+
+    <%= radio_button_tag :rating, "3", false ,id: "star1half", name: "review[rating]"  %>
+    <%= label_tag :star1half, "", class: "half", for: "star1half" %>
+
+    <%= radio_button_tag :rating, "2", false ,id: "star1", name: "review[rating]"  %>
+    <%= label_tag :star1, "", class: "full", for: "star1" %>
+
+    <%= radio_button_tag :rating, "1", false ,id: "starhalf", name: "review[rating]"  %>
+    <%= label_tag :starhalf, "", class: "half", for: "starhalf" %>
+    
+
+  </div>
+
+  <br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  <% end %>

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <a href=foods>Comidas</a>
 <a href=restaurants>Restaurantes</a>
 <a href=reviews>Reviews</a>
-<a href=friends>Amigos (não implementado ainda)</a>
+<a href="">Amigos (não implementado ainda)</a>
+=======
+>>>>>>> 5d82f2dfc02f0a20d7693793eff8ba75968b0a20
 <h1> Comidas cadastradas: </h1>
 <table>
 
@@ -9,6 +12,7 @@
     <th> Nome </th>
     <th> Categoria </th>
     <th> Restaurante </th>
+    <th> Avaliar </th>
   </tr>
 
   <% @foods.each do |f|%>
@@ -17,6 +21,7 @@
       <td><%=f.category%></td>
       <% x = Restaurant.find(f.restaurant_id) %>
       <td><%=x.name%></td>
+      <td><%= link_to "Avaliar esta comida", controller: 'reviews', action: 'new', food_id: f.id %></td>
     </tr>
   <% end %>
 

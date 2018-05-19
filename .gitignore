@@ -2,4 +2,7 @@
 rufinder/app/.DS_Store
 *.log
 *.cache
-rufinder/tmp/restart.txt
+rufinder/tmp
+*.pid
+*.pid
+*.pid

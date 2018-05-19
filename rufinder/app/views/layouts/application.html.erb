@@ -1,20 +1,43 @@
 <!DOCTYPE html5>
 <html>
   <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>RUFinder</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <% if !flash.empty? %>
+		<% flash.each do |type,message| %>
+      <div class="notice"><%= message %></div>
+		<% end %>
+    <% end %>
     <div class="menu">
       <% if current_user %>
-        Signed in as <strong><%= current_user.name %></strong>!
-        <%= link_to "Sign out", signout_path, id: "sign_out" %>
+      <div class="name">
+          <%= link_to current_user.name, root_url, id: "main"%>
+      </div>
+      <div class="button">
+        <%= link_to "Sair", signout_path, id: "sign_out" %>
+      </div>
+      <div class="button">
+        <%= link_to "Avaliações", reviews_url, id: "reviews" %>
+      </div>
+      <div class="button">
+        Amigos
+      </div>
+      <div class="button">
+        <%= link_to "Restaurantes", restaurants_url, id: "restaurants" %>
+      </div>
+      <div class="button">
+        <%= link_to "Comidas", foods_url, id: "foods" %>
+      </div>
       <% end %>
     </div>
     <div>
     <%= yield %>
     </div>
+	<%= debug(params) if Rails.env.development? %>
   </body>
 </html>

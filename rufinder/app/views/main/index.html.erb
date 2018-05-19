@@ -1,69 +1,91 @@
 <% require 'date' %>
+<<<<<<< HEAD
 <a href=foods>Comidas</a>
 <a href=restaurants>Restaurantes</a>
 <a href=reviews>Reviews</a>
-<a href=friends>Amigos (não implementado ainda)</a>
+<a href="">Amigos (não implementado ainda)</a>
 
+=======
+>>>>>>> 5d82f2dfc02f0a20d7693793eff8ba75968b0a20
 <% date = Date.today %>
 
-<br><h1> Almoço: </h1></br>
+
+<% ["Almoço","Janta"].each do |tipo| %>
+
+  <% bandeja = Array.new()        %>
+  <% nota = Array.new()           %>
+
+  <% 0.upto(3) do |i|             %>
+  <%    bandeja[i] = Array.new()  %>
+  <%    nota[i] = 0               %>
+  <% end %>
+
+  <% @records.where(meal: tipo).where(date: date).find_each do |r|                                    %>
+    <%  food = Food.find(r.food_id)                                                                   %>
+    <%  bandeja[food.restaurant_id-1].push(food.name)                                                 %>
+    <%  review = Review.where(food_id: food.id).where(user_id: current_user.id).first                 %>
+    <%  nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating - 5 if !review.nil?   %>
+    <% end %>
+
+  <% 0.upto(3) do |i| %>
+    <%   if bandeja[i].size < 2 %>
+    <%       nota[i] = -999     %>
+    <%   end                    %>
+    <% end %>
+
+  <% max = nota.max %>
+
+<br><h1><%= tipo %></h1><br>
 
 <table>
 
   <tr>
     <th> Central </th>
     <th> Física </th>
-    <th> Química </th>
-    <th> Prefeitura (PCO) </th>
   </tr>
 
-  <% @records.each do |r|%>
-    <% if r.meal == "Almoço" && r.date == date %>
-    <tr>
-      <% food = Food.find(r.food_id) %>
-      <% rid = food.restaurant_id %>
-      <% if rid == 1%>
-        <td><%=food.name%></td>
-      <% elsif rid == 2 %>
-        <th></th><td><%=food.name%></td>
-      <% elsif rid == 3 %>
-        <th></th><th></th><td><%=food.name%></td>
-      <% elsif rid == 4 %>
-        <th></th><th></th><th></th><td><%=food.name%></td>
-      <% end %>
-    </tr>
+  
+  <tr>
+
+    <% 0.upto(1) do |n| %>
+
+      <% if bandeja[n].size > 1 && max ==  nota[n] %>      <td class="best">
+      <% else %>                                           <td class="std">
+        <% end %>
+
+      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %> <%= f %><br> <% end %>
+      <% else %> Fechado <br>
+        <% end %>
+
+      </td>
     <% end %>
-  <% end %>
 
-</table>
+  </tr>
 
-<br><h1> Janta: </h1></br>
-
-<table>
 
   <tr>
-    <th> Central </th>
-    <th> Física </th>
     <th> Química </th>
     <th> Prefeitura (PCO) </th>
   </tr>
 
-  <% @records.each do |r|%>
-    <% if r.meal == "Janta" && r.date == date %>
-    <tr>
-      <% food = Food.find(r.food_id) %>
-      <% rid = food.restaurant_id %>
-      <% if rid == 1%>
-        <td><%=food.name%></td>
-      <% elsif rid == 2 %>
-        <th></th><td><%=food.name%></td>
-      <% elsif rid == 3 %>
-        <th></th><th></th><td><%=food.name%></td>
-      <% elsif rid == 4 %>
-        <th></th><th></th><th></th><td><%=food.name%></td>
-      <% end %>
-    </tr>
+  <tr>
+
+    <% 2.upto(3) do |n| %>
+
+      <% if bandeja[n].size > 1 && max ==  nota[n] %>      <td class="best">
+      <% else %>                                           <td class="std">
+        <% end %>
+
+      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %> <%= f %><br> <% end %>
+      <% else %> Fechado <br>
+        <% end %>
+
+      </td>
     <% end %>
-  <% end %>
+
+  </tr>
 
 </table>
+<%end%>
+
+<br><br><br>
