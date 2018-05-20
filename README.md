@@ -24,6 +24,10 @@ Para criar os databases do __PostgreSQL__ de teste e desenvolvimento e , em segu
 
 `rails db:create` e `rails db:migrate`
 
+Para carregar os dados padrão do banco de dados use:
+
+`rails db:seed`
+
 E o seguinte para inicializar o servidor local:
 
 `rails server`
