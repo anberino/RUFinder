@@ -1,1 +1,0 @@
-print "Manda Foods\n"
