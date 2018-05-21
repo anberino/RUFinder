@@ -1,0 +1,56 @@
+<h1> Amigos </h1>
+
+<table>
+
+	<% @friends.each do |x| %>
+		<% if f.sender_id == current_user.id %>
+			<% if f.status %>
+				<tr> <%= (User.find_by(id: f.receiver_id)).name %> </tr>
+			<% end %> 
+		<% end %>
+		<% if f.receiver_id == current_user.id %>
+			<% if f.status %>
+				<tr> <%= (User.find_by(id: f.sender_id)).name %> </tr>
+			<% end %> 
+		<% end %>
+	<% end %>
+
+</table>
+
+<br>
+
+<table>
+
+	<tr>
+		<th> Pedidos de Amizade </th>
+	</tr>
+
+	<tr> <td> Enviados </td> </tr>
+
+	<% @friends.each do |x| %>
+		<% if f.sender_id == current_user.id %>
+			<% if !f.status %>
+				<tr> <td> <%= (User.find_by(id: f.receiver_id)).name %> </td>> </tr>
+			<% end %> 
+		<% end %>
+	<% end %>
+
+	<tr> <td> Recebidos </td> </tr>
+
+	<% @friends.each do |x| %>
+		<% if f.reciever_id == current_user.id %>
+			<% if !f.status %>
+				<tr> <td> <%= (User.find_by(id: f.sender_id)).name %> </td> </tr>
+			<% end %> 
+		<% end %>
+	<% end %>
+
+</table>
+
+<h2> Adicionar amigos </h2>
+
+<p> Ainda não é possível adicionar amigos. </p>
+
+	
+
+<a href=main>Voltar</a>

@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20180519032710) do
     t.index ["restaurant_id"], name: "index_foods_on_restaurant_id"
   end
 
+  create_table "friends", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "receiver_id"
+    t.boolean "status", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "records", force: :cascade do |t|
     t.date "date"
     t.string "meal"

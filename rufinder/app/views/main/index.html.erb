@@ -19,6 +19,12 @@
     <%  nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating - 5 if !review.nil?   %>
     <% end %>
 
+  <% 0.upto(3) do |i| %>
+    <%   if bandeja[i].size < 2 %>
+    <%       nota[i] = -999     %>
+    <%   end                    %>
+    <% end %>
+
   <% max = nota.max %>
 
 <br><h1><%= tipo %></h1><br>
