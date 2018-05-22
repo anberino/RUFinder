@@ -17,11 +17,15 @@
       <td><%=f.name%></td>
       <% x = Restaurant.find(f.restaurant_id) %>
       <td><%=x.name%></td>
-      <td><%=r.rating%></td>
+<td class="rating">
+	  <% toStars r.rating do |star,number,ismarked|%>
+      	<%= radio_button_tag "rating#{r.id}", "3", ismarked ,id: number  %>
+    	<%= label_tag number, "", class: star, for: number %>
+	  <% end %>
+</td>
       <td><%=r.comment%></td>
     </tr>
   <% end %>
-
 </table>
 
 <a href=main>Voltar</a>

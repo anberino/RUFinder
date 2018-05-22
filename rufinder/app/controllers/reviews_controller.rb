@@ -56,7 +56,7 @@ class ReviewsController < ApplicationController
   end
 
   def show
-     @reviews = Review.all
+     @review = Review.find(params[:id])
   end
 
 
