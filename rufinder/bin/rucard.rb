@@ -27,7 +27,7 @@ def main()
 
 				data = cdp.slice!(/,dtainismncdp:"(?<data>.+?)"/,"data")				#Pega a data e deixa ela bonita
 				data = data.split(/\\+?\//)
-				data = Date.new(Integer(data[2]),Integer(data[1]),Integer(data[0]))
+				data = Date.new(data[2].to_i,data[1].to_i,data[0].to_i)
 				
 				if(card.length>1)
 					card.each_with_index do |x,index|
