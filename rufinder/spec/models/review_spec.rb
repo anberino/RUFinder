@@ -4,12 +4,12 @@ RSpec.describe Review, type: :model do
 
 	before do
 		@user = User.create(name: "José", email: "jose@teste.moe")
-		@rest = Restaurant.create(name: "Fisica")
-		@food = Food.create(name: "Papaya Assada", category: "Basico", restaurant_id: 1)
-		@review = Review.new(rating: 10 , user_id: 1, food_id: 1)
+		@rest = Restaurant.create(name: "Fisica", location: "Sei la onde")
+		@food = Food.create(name: "Papaya Assada", category: "Basico", restaurant_id: @rest.id)
+		@review = Review.new(rating: 10 , user_id: @user.id, food_id: @food.id)
 	end
-	
-	it "Creates a valid review" do 
+
+	it "Creates a valid review" do
 		expect(@review).to be_valid
 	end
 
