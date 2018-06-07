@@ -1,5 +1,36 @@
 require 'rails_helper'
 
 RSpec.describe Review, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	before do
+		@user = User.create(name: "José", email: "jose@teste.moe")
+		@rest = Restaurant.create(name: "Fisica")
+		@food = Food.create(name: "Papaya Assada", category: "Basico", restaurant_id: 1)
+		@review = Review.new(rating: 10 , user_id: 1, food_id: 1)
+	end
+	
+	it "Creates a valid review" do 
+		expect(@review).to be_valid
+	end
+
+	it "Doesn't allow a review with a nil food" do
+		@review.food_id = nil
+		expect(@review).to_not be_valid
+	end
+
+	it "Doesn't allow a review with a non-existing food" do
+		@review.food_id = 999
+		expect(@review).to_not be_valid
+	end
+
+	it "Doesn't allow a review with a nil user" do
+		@review.user_id = nil
+		expect(@review).to_not be_valid
+	end
+
+	it "Doesn't allow a review with a non-existing user" do
+		@review.user_id = 999
+		expect(@review).to_not be_valid
+	end
+
 end
