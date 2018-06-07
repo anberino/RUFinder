@@ -7,7 +7,7 @@ def main()
 	rest[8] = 2
 	rest[9] = 3
 
-	meal = ["Almoço", "Janta"]
+	meal = ["Almoço", "Jantar"]
 	cat = ["Básico", "Carne", "PVT", "Acompanhamento", "Salada", "Sobremesa", "Básico"]
 
 	seeds = open(Dir.pwd + "/db/backup.rb", "a")
@@ -64,7 +64,7 @@ def main()
 
 			today = cdp.slice!(/cdpdia:"(?<cdp>.+?)",codddd/,"cdp")		#Pega a janta do dia
 			if(today.nil?)
-				puts "Sem almoço no restaurante #{rest[i]} "
+				puts "Sem jantar no restaurante #{rest[i]} "
 			else
 				card = today.split(/\<br\>/)
 				dia = cdp.slice!(/diasemana:(?<dia>.),/,"dia")
