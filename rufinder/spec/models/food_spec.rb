@@ -14,6 +14,11 @@ RSpec.describe Food, type: :model do
     expect(@food3).not_to be_valid
   end
 
+  it "doesn't allow foods with invalid restaurants" do
+    @food1.restaurant_id = 100
+    expect(@food1).not_to be_valid
+  end
+
   it "has many reviews" do
     assc = described_class.reflect_on_association(:reviews)
     expect(assc.macro).to eq :has_many
