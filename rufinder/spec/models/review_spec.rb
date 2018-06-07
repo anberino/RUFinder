@@ -33,4 +33,14 @@ RSpec.describe Review, type: :model do
 		expect(@review).to_not be_valid
 	end
 
+	it "Belongs to users" do
+	    assc = described_class.reflect_on_association(:user)
+	    expect(assc.macro).to eq :belongs_to
+	end
+
+	it "Belongs to food" do
+	    assc = described_class.reflect_on_association(:food)
+	    expect(assc.macro).to eq :belongs_to
+	end
+
 end
