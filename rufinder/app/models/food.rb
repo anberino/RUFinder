@@ -5,4 +5,5 @@ class Food < ApplicationRecord
   has_many :records
   validates :name, presence: true
   validates :category, presence: true
+  validates_uniqueness_of :name, scope: :restaurant_id
 end
