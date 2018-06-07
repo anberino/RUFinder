@@ -3,4 +3,6 @@ class Food < ApplicationRecord
   has_many :reviews
   has_many :users, through: :reviews
   has_many :records
+  validates :name, presence: true
+  validates :category, presence: true
 end
