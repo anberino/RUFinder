@@ -1,0 +1,13 @@
+<h1> <%= @food.name %>: </h1>
+
+<% comments,users,media = info(@food.id) %>
+<h1>Média de avaliações:<%= media %> </h1>
+<table>
+  <% for i in 0..comments.length-1 %>
+  <tr>
+    <td><%= comments[i] %></td>
+    <td><%= User.find(users[i]).name %></td>
+  </tr>
+  <% end %>
+</table>
+<a href=main>Voltar</a>

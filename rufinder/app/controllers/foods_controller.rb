@@ -6,4 +6,9 @@ class FoodsController < ApplicationController
     	redirect_to root_path
     end
   end
+
+  def show
+     @food = Food.find(params[:id])
+  end
+
 end
