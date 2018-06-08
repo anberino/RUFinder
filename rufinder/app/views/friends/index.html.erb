@@ -22,8 +22,6 @@
 		<% u = (User.find_by(id: f.receiver_id)) %>
 		<% if !u.nil? %>
 			<tr> <td> <%= u.name %> </td> </tr>
-		<% else %>
-			<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
 		<% end %>
 	<% end %>
 
