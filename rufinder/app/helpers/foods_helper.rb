@@ -17,7 +17,7 @@ module FoodsHelper
     if(i>0)
       media = soma/(i)
     else
-      media = 0
+      media = 5
     end
     return comments, users, media
   end
