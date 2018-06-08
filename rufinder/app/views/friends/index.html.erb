@@ -6,12 +6,12 @@
 		<% if f.sender_id == current_user.id %>
 			<% if f.status %>
 				<tr> <%= (User.find_by(id: f.receiver_id)).name %> </tr>
-			<% end %> 
+			<% end %>
 		<% end %>
 		<% if f.receiver_id == current_user.id %>
 			<% if f.status %>
 				<tr> <%= (User.find_by(id: f.sender_id)).name %> </tr>
-			<% end %> 
+			<% end %>
 		<% end %>
 	<% end %>
 
@@ -36,7 +36,7 @@
 				<% else %>
 					<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
 				<% end %>
-			<% end %> 
+			<% end %>
 		<% end %>
 	<% end %>
 
@@ -44,15 +44,14 @@
 
 	<% @friends.each do |f| %>
 		<% if f.receiver_id == current_user.id %>
-			<% if !f.status %>
-				<tr> <td> <%= (User.find_by(id: f.sender_id)).name %> </td> </tr>
-			<% end %> 
+
+				<tr> <td> <%= User.find(f.sender_id).name %> </td> </tr>
 		<% end %>
 	<% end %>
 
 </table>
 
 <p><%= link_to "Adicionar amigo", controller: 'friends', action: 'new' %></p>
-	
+
 
 <a href=main>Voltar</a>
