@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   resources :restaurants
   resources :records
   resources :friends
+  get 'friends/add/:request_id', to:'friends#add'
+  get 'friends/remove/:request_id', to:'friends#remove'
 end

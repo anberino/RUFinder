@@ -2,17 +2,8 @@
 
 <table>
 
-	<% @friends.each do |f| %>
-		<% if f.sender_id == current_user.id %>
-			<% if f.status %>
-				<tr> <%= (User.find_by(id: f.receiver_id)).name %> </tr>
-			<% end %>
-		<% end %>
-		<% if f.receiver_id == current_user.id %>
-			<% if f.status %>
-				<tr> <%= (User.find_by(id: f.sender_id)).name %> </tr>
-			<% end %>
-		<% end %>
+	<% @friends.where(receiver_id: current_user.id).where(status: true).or(@friends.where(receiver_id: current_user.id).where(status: true)).find_each do |f| %>
+				<tr> <%= (User.find_by(id: f.sender_id)).name %> <%= link_to "Remover", controller: 'friends', action: 'remove', request_id: f.id %> </tr>
 	<% end %>
 
 </table>
@@ -27,26 +18,21 @@
 
 	<tr> <td> <b>Enviados</b> </td> </tr>
 
-	<% @friends.each do |f| %>
-		<% if f.sender_id == current_user.id %>
-			<% if !f.status %>
-				<% u = (User.find_by(id: f.receiver_id)) %>
-				<% if !u.nil? %>
-					<tr> <td> <%= u.name %> </td> </tr>
-				<% else %>
-					<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
-				<% end %>
-			<% end %>
+	<% @friends.where(sender_id: current_user.id).where(status: false) do |f| %>
+		<% u = (User.find_by(id: f.receiver_id)) %>
+		<% if !u.nil? %>
+			<tr> <td> <%= u.name %> </td> </tr>
+		<% else %>
+			<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
 		<% end %>
 	<% end %>
 
 	<tr> <td> <b>Recebidos</b> </td> </tr>
 
-	<% @friends.each do |f| %>
-		<% if f.receiver_id == current_user.id %>
+	<% @friends.where(status: false).where(receiver_id: current_user.id).find_each do |f| %>
 
-				<tr> <td> <%= User.find(f.sender_id).name %> </td> </tr>
-		<% end %>
+		<tr> <td> <%= User.find(f.sender_id).name %> <%= link_to "Adicionar", controller: 'friends', action: 'add', request_id: f.id %> <%= link_to "Remover", controller: 'friends', action: 'remove', request_id: f.id %> </td> </tr>
+
 	<% end %>
 
 </table>

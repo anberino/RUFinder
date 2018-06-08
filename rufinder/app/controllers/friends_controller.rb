@@ -43,6 +43,45 @@ class FriendsController < ApplicationController
   def destroy
   end
 
+  def add
+    request = params[:request_id].to_i
+    if(!request.nil?)
+        pedido = Friend.find(request)
+        if(pedido.receiver_id == current_user.id)
+          if(pedido.nil?)
+            flash[:notice] = "Para de tentar hackear os bagulhos porra"
+          else
+            pedido.status = true
+            pedido.save
+          end
+        else
+          flash[:notice] = "Para de tentar hackear os bagulhos porra"
+        end
+    else
+      flash[:notice] = "Para de tentar hackear os bagulhos porra"
+    end
+    redirect_to friends_url
+  end
+
+  def remove
+    request = params[:request_id].to_i
+    if(!request.nil?)
+        pedido = Friend.find(request)
+        if(pedido.receiver_id == current_user.id || pedido.sender_id == current_user.id)
+          if(pedido.nil?)
+            flash[:notice] = "Para de tentar hackear os bagulhos porra"
+          else
+            pedido.destroy
+          end
+        else
+          flash[:notice] = "Para de tentar hackear os bagulhos porra"
+        end
+    else
+      flash[:notice] = "Para de tentar hackear os bagulhos porra"
+    end
+    redirect_to friends_url
+  end
+
   private
     def friend_params
       params.require(:friend).permit(:email)
