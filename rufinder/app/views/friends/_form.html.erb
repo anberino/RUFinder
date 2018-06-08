@@ -1,0 +1,5 @@
+<%= form_with scope: :friend, url: :friends, local: true do |f| %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.submit "Enviar pedido de amizade"%>
+<% end %>

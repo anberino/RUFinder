@@ -2,7 +2,7 @@
 
 <table>
 
-	<% @friends.each do |x| %>
+	<% @friends.each do |f| %>
 		<% if f.sender_id == current_user.id %>
 			<% if f.status %>
 				<tr> <%= (User.find_by(id: f.receiver_id)).name %> </tr>
@@ -25,20 +25,25 @@
 		<th> Pedidos de Amizade </th>
 	</tr>
 
-	<tr> <td> Enviados </td> </tr>
+	<tr> <td> <b>Enviados</b> </td> </tr>
 
-	<% @friends.each do |x| %>
+	<% @friends.each do |f| %>
 		<% if f.sender_id == current_user.id %>
 			<% if !f.status %>
-				<tr> <td> <%= (User.find_by(id: f.receiver_id)).name %> </td>> </tr>
+				<% u = (User.find_by(id: f.receiver_id)) %>
+				<% if !u.nil? %>
+					<tr> <td> <%= u.name %> </td> </tr>
+				<% else %>
+					<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
+				<% end %>
 			<% end %> 
 		<% end %>
 	<% end %>
 
-	<tr> <td> Recebidos </td> </tr>
+	<tr> <td> <b>Recebidos</b> </td> </tr>
 
-	<% @friends.each do |x| %>
-		<% if f.reciever_id == current_user.id %>
+	<% @friends.each do |f| %>
+		<% if f.receiver_id == current_user.id %>
 			<% if !f.status %>
 				<tr> <td> <%= (User.find_by(id: f.sender_id)).name %> </td> </tr>
 			<% end %> 
@@ -47,10 +52,7 @@
 
 </table>
 
-<h2> Adicionar amigos </h2>
-
-<p> Ainda não é possível adicionar amigos. </p>
-
+<p><%= link_to "Adicionar amigo", controller: 'friends', action: 'new' %></p>
 	
 
 <a href=main>Voltar</a>
