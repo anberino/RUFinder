@@ -18,12 +18,10 @@
 
 	<tr> <td> <b>Enviados</b> </td> </tr>
 
-	<% @friends.where(sender_id: current_user.id).where(status: false) do |f| %>
+	<% @friends.where(sender_id: current_user.id).where(status: false).find_each do |f| %>
 		<% u = (User.find_by(id: f.receiver_id)) %>
 		<% if !u.nil? %>
 			<tr> <td> <%= u.name %> </td> </tr>
-		<% else %>
-			<tr> <td> Você não tem pedidos de amizade enviados... </td> </tr>
 		<% end %>
 	<% end %>
 
