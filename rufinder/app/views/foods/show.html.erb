@@ -3,10 +3,14 @@
 <% comments,users,media = info(@food.id) %>
 <h1>Média de avaliações:<%= media %> </h1>
 <table>
+  <tr>
+    <th>Usuário</th>
+    <th>Comentário</th>
+  </tr>
   <% for i in 0..comments.length-1 %>
   <tr>
-    <td><%= comments[i] %></td>
     <td><%= User.find(users[i]).name %></td>
+    <td><%= comments[i] %></td>
   </tr>
   <% end %>
 </table>

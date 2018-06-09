@@ -18,7 +18,6 @@ class FriendsController < ApplicationController
   		flash[:error] = "Você nem existe de verdade e quer ter amigos, wtf"
   		redirect_to root_url
   	end
-    print("Current_user id: #{current_user.id} e Amigo:#{@amigo.id}")
   	@friend = Friend.new(sender_id: current_user.id, receiver_id: @amigo.id)
   	if @friend.save
   		flash[:notice] = "Seu pedido de amizade foi enviado"

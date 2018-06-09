@@ -52,12 +52,12 @@
 
     <%= radio_button_tag :rating, "1", false ,id: "starhalf", name: "review[rating]"  %>
     <%= label_tag :starhalf, "", class: "half", for: "starhalf" %>
-    
+
 
   </div>
 
   <br>
-  <div class="actions">
-    <%= form.submit %>
+  <div class="action">
+    <%= form.submit 'Enviar', class: 'submitbtn'%>
   </div>
   <% end %>

@@ -17,13 +17,13 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-	@review = Review.find(params[:id])
-	if current_user.id != @review.user_id
-		flash[:notice] = "Sai fora porra"
-		redirect_to root_url
-	else
-		@food = Food.find(@review.food_id)	
-	end
+  	@review = Review.find(params[:id])
+  	if current_user.id != @review.user_id
+  		flash[:notice] = "Sai fora porra"
+  		redirect_to root_url
+  	else
+  		@food = Food.find(@review.food_id)
+  	end
   end
 
   def create
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
       end
     end
   end
-  
+
   def update
     @review = Review.find(params[:id])
     respond_to do |format|
@@ -48,11 +48,17 @@ class ReviewsController < ApplicationController
         format.html { redirect_to @review, notice: 'Review was successfully updated.' }
         format.json { render :show, status: :updated, location: @review }
       else
-		@food = Food.find(@review.food_id)
+		    @food = Food.find(@review.food_id)
         format.html { render 'edit'}
         format.json { render json: @review.errors, status: :unprocessable_entity }
-	  end
-	end
+	     end
+	    end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to reviews_url, :notice => "Reviews deletada com sucesso!"
   end
 
   def show
@@ -62,7 +68,7 @@ class ReviewsController < ApplicationController
 
 
 # Never trust parameters from the scary internet, only allow the white list through.
-  private	
+  private
     def review_params
       params.require(:review).permit(:comment,:rating,:user_id,:food_id)
     end

@@ -28,4 +28,5 @@ Rails.application.routes.draw do
   resources :friends
   get 'friends/add/:request_id', to:'friends#add'
   get 'friends/remove/:request_id', to:'friends#remove'
+  delete 'reviews/:id', to: 'reviews#destroy'
 end

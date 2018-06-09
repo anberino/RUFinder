@@ -1,18 +1,16 @@
-<h1> Reviews feitas: </h1>
+<h1> Reviews feitas por você: </h1>
 <table>
 
   <tr>
-    <th> Usuário </th>
     <th> Comida </th>
     <th> Restaurante </th>
     <th> Nota </th>
     <th> Comentário </th>
+    <th> Ações      </th>
   </tr>
 
-  <% @reviews.each do |r|%>
+  <% @reviews.where(user_id: current_user.id).each do |r|%>
     <tr>
-      <% u = User.find(r.user_id) %>
-      <td><%=u.name%></td>
       <% f = Food.find(r.food_id) %>
       <td><%=f.name%></td>
       <% x = Restaurant.find(f.restaurant_id) %>
@@ -24,6 +22,11 @@
 	  <% end %>
 </td>
       <td><%=r.comment%></td>
+      <td><%= link_to "Editar",{controller: 'reviews',action: 'edit', id: r.id},
+              class:'button1'%>
+          <%= link_to "Remover",r,method: :delete, data: {confirm: "Are you sure?"},id:r.id,
+              class:'button2'%>
+      </td>
     </tr>
   <% end %>
 </table>
