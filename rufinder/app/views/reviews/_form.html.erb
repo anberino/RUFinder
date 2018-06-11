@@ -13,14 +13,19 @@
 
 
   Avaliando <%=@food.name %> da(o) <%= Restaurant.find(@food.restaurant_id).name %>
+  <br>
+  <br>
   <div class="field">
-    <%= form.label :comentario %>
-    <%= form.text_area :comment, id: :review_comment %>
+    <%= form.label :comentario, "Comentário:" %>
+    <br>
+    <%= form.text_area :comment, id: :review_comment, placeholder: "Deixe seu comentário!" %>
   </div>
 
   <!--  Passando o id do usuario corrente para o user_id reviews !-->
   <%= form.hidden_field :user_id, id: :review_user ,value: current_user.id %>
   <%= form.hidden_field :food_id, id: :review_food ,value: @food.id %>
+  <br>
+  <span>Avaliação</span>
   <div class ="rating">
 
     <%= radio_button_tag :rating, "10", false ,id: "star5", name: "review[rating]"  %>
