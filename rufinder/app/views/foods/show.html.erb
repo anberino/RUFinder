@@ -1,17 +1,50 @@
-<h1> <%= @food.name %>: </h1>
+<h1> <%= @food.name %> </h1>
 
-<% comments,users,media = info(@food.id) %>
-<h1>Média de avaliações:<%= media %> </h1>
+<% review,media = info(@food.id) %>
+<h1>
+  <div class="rating1">
+    <% rate = media/2.to_i %>
+    <% half = media/2.0 - rate %>
+    <% for i in 0...rate %>
+        <span class="fa fa-star checked"></span>
+    <% end %>
+    <% if half == 0 %>
+      <% for i in 0...5-rate %>
+          <span class="fa fa-star"></span>
+      <% end %>
+    <% else %>
+      <span class="fa fa-star-half-full checked"></span>
+      <% for i in 0...4-rate %>
+          <span class="fa fa-star"></span>
+      <% end %>
+    <% end %>
+</div>
+</h1>
+<br>
+<br>
 <table>
   <tr>
     <th>Usuário</th>
     <th>Comentário</th>
+    <th>Nota</th>
   </tr>
-  <% for i in 0..comments.length-1 %>
-  <tr>
-    <td><%= User.find(users[i]).name %></td>
-    <td><%= comments[i] %></td>
-  </tr>
+  <% for i in 0..review.length-1 %>
+    <% if review[i].comment != "" %>
+      <tr>
+        <td><%= User.find(review[i].user_id).name %></td>
+        <td><%= review[i].comment %></td>
+        <td>
+          <% rate = (review[i].rating/2).to_i %>
+          <% for i in 0...rate %>
+              <span class="fa fa-star checked"></span>
+          <% end %>
+
+          <% for i in 0...5-rate %>
+              <span class="fa fa-star"></span>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
   <% end %>
 </table>
 <%= link_to "Voltar", root_url %>

@@ -12,7 +12,7 @@
     <th> Física </th>
   </tr>
 
-  
+
   <tr>
 
     <% 0.upto(1) do |n| %>
@@ -21,7 +21,10 @@
       <% else %>                                           <td class="std">
         <% end %>
 
-      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %> <%= f %><br> <% end %>
+      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
+        <%= link_to f.name, controller: 'reviews', action: 'new', food_id: f.id %>
+        <br>
+     <% end %>
       <% else %> Fechado <br>
         <% end %>
 
@@ -44,7 +47,10 @@
       <% else %>                                           <td class="std">
         <% end %>
 
-      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %> <%= f %><br> <% end %>
+      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
+       <%= link_to f.name, controller: 'reviews', action: 'new', food_id: f.id %>
+       <br>
+     <% end %>
       <% else %> Fechado <br>
         <% end %>
 

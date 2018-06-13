@@ -1,11 +1,17 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 .rating {
   border: none;
-  margin-left: 7%;
-  margin-right: 43%;
+  margin-left: 6%;
+  margin-right: 42%;
+  width: 50%;
+}
+
+.rating1 {
+  border: none;
+  margin: auto;
   width: 50%;
 }
 
@@ -24,7 +30,7 @@
 }
 
 .rating > label {
-  color: #ddd;
+  color: #929292;
  float: right;
 }
 
@@ -65,6 +71,10 @@
     font-size: 16px;
     opacity:1
 
+}
+
+.checked {
+    color: orange;
 }
 
 .button2:hover {opacity: 0.6}

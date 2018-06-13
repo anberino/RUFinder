@@ -13,28 +13,28 @@
       <div class="notice"><%= message %></div>
 		<% end %>
     <% end %>
-    <div class="menu">
+    <ul>
       <% if current_user %>
-      <div class="name">
-          <%= link_to current_user.name, root_url, id: "main"%>
-      </div>
-      <div class="button">
+      <li>
         <%= link_to "Sair", signout_path, id: "sign_out" %>
-      </div>
-      <div class="button">
+      </li>
+      <li>
         <%= link_to "Avaliações", reviews_url, id: "reviews" %>
-      </div>
-      <div class="button">
+      </li>
+      <li>
         <%= link_to "Amigos", friends_url, id: "friends" %>
-      </div>
-      <div class="button">
+      </li>
+      <li>
         <%= link_to "Restaurantes", restaurants_url, id: "restaurants" %>
-      </div>
-      <div class="button">
+      </li>
+      <li>
         <%= link_to "Comidas", foods_url, id: "foods" %>
-      </div>
+      </li>
+      <li>
+          <%= link_to "Cardápio", root_url, id: "main"%>
+      </li>
       <% end %>
-    </div>
+    </ul>
     <div>
     <%= yield %>
     </div>
