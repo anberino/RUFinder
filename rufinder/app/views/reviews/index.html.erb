@@ -16,14 +16,21 @@
       <% x = Restaurant.find(f.restaurant_id) %>
       <td><%=x.name%></td>
       <td class="rating">
-          <% rate = (r.rating/2).to_i %>
-      	  <% for i in 0...rate %>
-            	<span class="fa fa-star checked"></span>
-      	  <% end %>
-
+        <% rate = (r.rating/2).to_i %>
+        <% half = r.rating/2.0 - rate %>
+        <% for i in 0...rate %>
+            <span class="fa fa-star checked"></span>
+        <% end %>
+        <% if half == 0 %>
           <% for i in 0...5-rate %>
-            <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
           <% end %>
+        <% else %>
+          <span class="fa fa-star-half-full checked"></span>
+          <% for i in 0...4-rate %>
+              <span class="fa fa-star"></span>
+          <% end %>
+        <% end %>
       </td>
       <td><%=r.comment%></td>
       <td><%= link_to "Editar",{controller: 'reviews',action: 'edit', id: r.id},
