@@ -3,20 +3,8 @@
 <% review,media = info(@food.id) %>
 <h1>
   <div class="rating1">
-    <% rate = media/2.to_i %>
-    <% half = media/2.0 - rate %>
-    <% for i in 0...rate %>
-        <span class="fa fa-star checked"></span>
-    <% end %>
-    <% if half == 0 %>
-      <% for i in 0...5-rate %>
-          <span class="fa fa-star"></span>
-      <% end %>
-    <% else %>
-      <span class="fa fa-star-half-full checked"></span>
-      <% for i in 0...4-rate %>
-          <span class="fa fa-star"></span>
-      <% end %>
+    <% starRating(media) do |htmlstr| %>
+      <%= htmlstr.html_safe %>
     <% end %>
 </div>
 </h1>
