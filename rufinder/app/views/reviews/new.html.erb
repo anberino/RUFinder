@@ -1,4 +1,3 @@
-<h1> Avaliar: </h1>
+<h1>Avaliando: <%= @food.name %> (<%= Restaurant.find(@food.restaurant_id).name %>) </h1>
 
 <%= render 'form' %>
-

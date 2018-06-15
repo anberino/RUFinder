@@ -1,3 +1,12 @@
 // Place all the styles related to the Foods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+.comment{
+  background-color: #e4efeb;
+  border-bottom: 3px solid #bbb;
+  border-right:  2px solid #bbb;
+  text-align: left;
+  font-family: 'Play', sans-serif;
+}

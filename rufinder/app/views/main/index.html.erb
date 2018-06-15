@@ -22,7 +22,7 @@
         <% end %>
 
       <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
-        <%= link_to f.name, controller: 'reviews', action: 'new', food_id: f.id %>
+        <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
         <br>
      <% end %>
       <% else %> Fechado <br>
@@ -48,7 +48,7 @@
         <% end %>
 
       <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
-       <%= link_to f.name, controller: 'reviews', action: 'new', food_id: f.id %>
+       <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
        <br>
      <% end %>
       <% else %> Fechado <br>

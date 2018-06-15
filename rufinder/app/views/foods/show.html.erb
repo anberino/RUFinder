@@ -1,6 +1,8 @@
-<h1> <%= @food.name %> </h1>
+<h1> <%= @food.name %> (<%= Restaurant.find(@food.restaurant_id).name %>) </h1>
 
 <% review,media = info(@food.id) %>
+<%= link_to "Avaliar",{controller: 'reviews',action: 'create', food_id: @food.id},
+        class:'button1'%>
 <h1>
   <div class="rating1">
     <% starRating(media) do |htmlstr| %>
@@ -10,29 +12,21 @@
 </h1>
 <br>
 <br>
-<table>
-  <tr>
-    <th>Usuário</th>
-    <th>Comentário</th>
-    <th>Nota</th>
-  </tr>
+
   <% for i in 0..review.length-1 %>
     <% if review[i].comment != "" %>
-      <tr>
-        <td><%= User.find(review[i].user_id).name %></td>
-        <td><%= review[i].comment %></td>
-        <td>
-          <% rate = (review[i].rating/2).to_i %>
-          <% for i in 0...rate %>
-              <span class="fa fa-star checked"></span>
+      <div class="comment">
+        <%= User.find(review[i].user_id).name %>
+        <br>
+          <% starRating(review[i].rating) do |htmlstr| %>
+            <%= htmlstr.html_safe %>
           <% end %>
+          <%= review[i].created_at.strftime("%d/%m/%Y") %>
+          <br>
+        <%= review[i].comment %>
 
-          <% for i in 0...5-rate %>
-              <span class="fa fa-star"></span>
-          <% end %>
-        </td>
-      </tr>
     <% end %>
+      </div>
+      <br>
   <% end %>
-</table>
 <%= link_to "Voltar", root_url %>
