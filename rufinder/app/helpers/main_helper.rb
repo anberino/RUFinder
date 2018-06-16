@@ -2,9 +2,7 @@ require 'date'
 
 module MainHelper
 
-	def getFood(tipo)
-
-		date = Date.today
+	def getFood(tipo,date)
 
 		bandeja = Array.new()
 		nota = Array.new()
@@ -28,6 +26,29 @@ module MainHelper
 		end
 
 		return bandeja, nota
+
+	end
+
+	def getDia(dia)
+
+		if dia == nil
+			return Date.today, Date.today.wday - 1
+		end
+
+		semana = ["Seg","Ter","Qua","Qui","Sex","Sab","Dom"]
+
+		if semana.include? dia
+
+			hoje = Date.today.wday - 1
+			quero = semana.find_index(dia)
+
+			delta = quero - hoje
+
+			return Date.today + (delta), quero
+
+		else
+			return Date.today, Date.today.wday - 1
+		end
 
 	end
 

@@ -1,6 +1,20 @@
+
+<% dia, semana = getDia(params[:dia]) %>
+
+<br>
+<ul class="semana">
+  <li><% if semana == 0 %> <b> Seg </b> <% else %> <%= link_to "Seg", "/main?dia=Seg" %> <%end%> </li>
+  <li><% if semana == 1 %> <b> Ter </b> <% else %> <%= link_to "Ter", "/main?dia=Ter" %> <%end%> </li>
+  <li><% if semana == 2 %> <b> Qua </b> <% else %> <%= link_to "Qua", "/main?dia=Qua" %> <%end%> </li>
+  <li><% if semana == 3 %> <b> Qui </b> <% else %> <%= link_to "Qui", "/main?dia=Qui" %> <%end%> </li>
+  <li><% if semana == 4 %> <b> Sex </b> <% else %> <%= link_to "Sex", "/main?dia=Sex" %> <%end%> </li>
+  <li><% if semana == 5 %> <b> Sab </b> <% else %> <%= link_to "Sab", "/main?dia=Sab" %> <%end%> </li>
+  <li><% if semana == 6 %> <b> Dom </b> <% else %> <%= link_to "Dom", "/main?dia=Dom" %> <%end%> </li>
+</ul>
+
 <% ["Almoço","Jantar"].each do |tipo| %>
 
-  <% bandeja, nota = getFood(tipo) %>
+  <% bandeja, nota = getFood(tipo,dia) %>
   <% max = nota.max %>
 
 <br><h1><%= tipo %></h1><br>

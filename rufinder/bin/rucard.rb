@@ -73,7 +73,7 @@ def main()
 					card.each_with_index do |x,index|
 						x.gsub!(/\\+?\//,'/')
 						x.gsub!(/\\+u(.{4})/) {|match| [$1.hex].pack('U*')}
-						x.gsub!(/Opção: /,'')
+						x.gsub!(/Opção:\s*/,'')
 						y = x.split(/\s*\/\s*/)
 						y.each do |com| 
 							com.capitalize!

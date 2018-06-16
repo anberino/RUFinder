@@ -1,3 +1,71 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table{
+	width: 100%;
+}
+
+.std{
+
+	background-color:#ffffff;
+
+	border: 1px solid black;
+	border-radius: 3%;
+
+	line-height: 150%;
+
+	padding: 0.5%;
+
+	width: 50%;
+}
+
+.std a{
+	text-decoration: none;
+	color: #000000;
+}
+
+.best{
+	border: 3px solid #cccc00;
+	border-radius: 3%;
+
+	line-height: 150%;
+
+	padding: 0.5%;
+
+	background-color:#ffff99;
+
+	font-weight: bold;
+
+	width: 50%;
+}
+
+.best a{
+	text-decoration: none;
+	color: #4D4D00;
+}
+
+.semana{
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	background-color: #e4efeb;
+	list-style: none;
+	width: 100%;
+}
+
+.semana b{
+	padding: 10px 13px;
+	display: block;
+}
+
+.semana a{
+	text-decoration: none;
+	padding: 10px 13px;
+	color: #0f714e;
+	display: block;
+}
+
+.semana a:hover{
+	background-color: #ffffff;
+}

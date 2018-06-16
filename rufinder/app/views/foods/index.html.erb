@@ -1,6 +1,41 @@
 <h1> Comidas cadastradas: </h1>
-<table>
+<form class="search">
+  <table class="filter">
+    <tr>
 
+      <th>Restaurantes</th>
+      <th>Categorias</th>
+
+    </tr>
+    <tr>
+
+      <td>
+          <input type="checkbox" name="restaurant" value="1" checked> Central<br>
+          <input type="checkbox" name="restaurant" value="2" checked> Física<br>
+          <input type="checkbox" name="restaurant" value="3" checked> Química<br>
+          <input type="checkbox" name="restaurant" value="4" checked> Prefeitura (PCO)
+      </td>
+
+      <td>
+          <input type="checkbox" name="category" value="Básico" checked> Básico<br>
+          <input type="checkbox" name="category" value="Carne" checked> Carne<br>
+          <input type="checkbox" name="category" value="PVT" checked> PVT<br>
+          <input type="checkbox" name="category" value="Básico" checked> Acompanhamento<br>
+          <input type="checkbox" name="category" value="Salada" checked> Salada<br>
+          <input type="checkbox" name="category" value="Sobremesa" checked> Sobremesa
+      </td>
+      <td> 
+        <p>Comida: <input type="text" name="regex" style="width: 80%;"></p><br>
+      </td>
+
+    </tr>
+  </table>
+  <br><input type="submit" value="Pesquisar">
+</form>
+
+<br>
+
+<table>
   <tr>
     <th> Nome </th>
     <th> Categoria </th>
