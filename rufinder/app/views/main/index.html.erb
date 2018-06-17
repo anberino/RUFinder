@@ -1,7 +1,6 @@
 
 <% dia, semana = getDia(params[:dia]) %>
 
-<br>
 <ul class="semana">
   <li><% if semana == 0 %> <b> Seg </b> <% else %> <%= link_to "Seg", "/main?dia=Seg" %> <%end%> </li>
   <li><% if semana == 1 %> <b> Ter </b> <% else %> <%= link_to "Ter", "/main?dia=Ter" %> <%end%> </li>
