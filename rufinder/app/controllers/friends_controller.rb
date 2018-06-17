@@ -21,6 +21,7 @@ class FriendsController < ApplicationController
   	@friend = Friend.new(sender_id: current_user.id, receiver_id: @amigo.id)
   	if @friend.save
   		flash[:notice] = "Seu pedido de amizade foi enviado"
+      redirect_to friends_path
   	else
   		flash[:error] = "Deu bostaaaaaaaaaaa"
   	end
@@ -30,10 +31,15 @@ class FriendsController < ApplicationController
   	@friend = Friend.new
   end
 
+  def eat
+    @friends = Friend.all
+  end
+
   def edit
   end
 
   def show
+    redirect_to root_path
   end
 
   def update

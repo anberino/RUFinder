@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   resources :friends
   get 'friends/add/:request_id', to:'friends#add'
   get 'friends/remove/:request_id', to:'friends#remove'
+  get '/eat', action: :eat, controller: 'friends'
   delete 'reviews/:id', to: 'reviews#destroy'
 end

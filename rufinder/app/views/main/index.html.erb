@@ -1,4 +1,3 @@
-
 <% dia, semana = getDia(params[:dia]) %>
 
 <ul class="semana">
@@ -10,6 +9,8 @@
   <li><% if semana == 6 %> <b> Sab </b> <% else %> <%= link_to "Sab", "/main?dia=Sab" %> <%end%> </li>
   <li><% if semana == 0 %> <b> Dom </b> <% else %> <%= link_to "Dom", "/main?dia=Dom" %> <%end%> </li>
 </ul>
+
+<%= link_to "Comer com amigos", controller: 'friends', action: 'eat' %>
 
 <% ["Almoço","Jantar"].each do |tipo| %>
 
