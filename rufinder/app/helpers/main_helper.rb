@@ -32,7 +32,7 @@ module MainHelper
 	def getDia(dia)
 
 		if dia == nil
-			return Date.today, Date.today.wday - 1
+			return Date.today, Date.today.wday
 		end
 
 		semana = ["Seg","Ter","Qua","Qui","Sex","Sab","Dom"]
@@ -42,12 +42,14 @@ module MainHelper
 			hoje = Date.today.wday - 1
 			quero = semana.find_index(dia)
 
+			if hoje == -1 then hoje = 6 end
+
 			delta = quero - hoje
 
-			return Date.today + (delta), quero
+			return Date.today + (delta), (quero+1)%7
 
 		else
-			return Date.today, Date.today.wday - 1
+			return Date.today, Date.today.wday
 		end
 
 	end
