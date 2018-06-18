@@ -2,10 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table{
-	width: 100%;
-}
-
 .std{
 
 	background-color:#ffffff;
@@ -47,21 +43,21 @@ table{
 
 .semana{
 	display: flex;
-	align-items: stretch;
-	justify-content: center;
+	justify-content: space-around;
 	background-color: #e4efeb;
 	list-style: none;
 	width: 100%;
 }
 
 .semana b{
-	padding: 10px 13px;
+	padding: 0.5em;
+	width: 50%;
 	display: block;
 }
 
 .semana a{
 	text-decoration: none;
-	padding: 10px 13px;
+	padding: 0.5em;
 	color: #0f714e;
 	display: block;
 }
