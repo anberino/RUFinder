@@ -12,7 +12,7 @@ class FriendsController < ApplicationController
   	@amigo = User.find_by(email: friend[:email])
   	if @amigo.nil?
   		flash[:error] = "Esta pessoa não foi encontrada... Tem certeza de que digitou o e-mail corretamente?"
-  		redirect_to foods_url
+  		redirect_to friends_path
   	end
   	if current_user.nil?
   		flash[:error] = "Você nem existe de verdade e quer ter amigos, wtf"
