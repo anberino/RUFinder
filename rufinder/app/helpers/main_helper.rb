@@ -2,7 +2,7 @@ require 'date'
 
 module MainHelper
 
-	def getFood(tipo,date)
+	def getFood(tipo,date,id)
 
 		bandeja = Array.new()
 		nota = Array.new()
@@ -14,8 +14,8 @@ module MainHelper
 
 		@records.where(meal: tipo).where(date: date).find_each do |r|
 			food = Food.find(r.food_id)
-			bandeja[food.restaurant_id-1].push(food)                                                 
-			review = Review.where(food_id: food.id).where(user_id: current_user.id).first
+			bandeja[food.restaurant_id-1].push(food)
+			review = Review.where(food_id: food.id).where(user_id: id).first
 			nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating - 5 if !review.nil?
 		end
 

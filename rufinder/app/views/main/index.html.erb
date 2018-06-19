@@ -14,7 +14,7 @@
 
 <% ["Almoço","Jantar"].each do |tipo| %>
 
-  <% bandeja, nota = getFood(tipo,dia) %>
+  <% bandeja, nota = getFood(tipo,dia, current_user.id) %>
   <% max = nota.max %>
 
 <br><h1><%= tipo %></h1><br>

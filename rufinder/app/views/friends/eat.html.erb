@@ -1,12 +1,24 @@
 <h1> Com quais amigos você vai comer? </h1>
 
-<ul>
+<%= form_tag controller: "friends", action: "selected", method: "post" do %>
+  <table>
 
-  <% @friends.where(receiver_id: current_user.id).where(status: true).or(@friends.where(sender_id: current_user.id).where(status: true)).find_each do |f| %>
-      <input type="checkbox" name="friend" value="1" > <%= (User.find_by(id: f.sender_id)).name %> <br>
-  <% end %>
+    <% @friends.where(receiver_id: current_user.id).where(status: true).or(@friends.where(sender_id: current_user.id).where(status: true)).find_each do |f| %>
+        <% if f.sender_id == current_user.id %>
+          <% @id = f.receiver_id %>
+        <% else %>
+          <% @id = f.sender_id %>
+        <% end %>
 
-</ul>
+        <tr> <td>
+          <%= check_box_tag "selected_ids[]", @id %>
+          <%= (User.find_by(id: @id)).name %>
+        </td> </tr>
+    <% end %>
+
+  </table>
+  <%= submit_tag "Comer com amigos" %>
+<% end %>
 
 <p>
   <%= link_to "Voltar", root_path %>

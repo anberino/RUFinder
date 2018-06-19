@@ -1,5 +1,5 @@
 class RecordsController < ApplicationController
-    def index
+  def index
     if(current_user)
       @records = Record
     else

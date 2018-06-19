@@ -35,11 +35,15 @@ class FriendsController < ApplicationController
     @friends = Friend.all
   end
 
+  def selected
+    @selec = params[:selected_ids]
+    @records = Record.all
+  end
+
   def edit
   end
 
   def show
-    redirect_to root_path
   end
 
   def update

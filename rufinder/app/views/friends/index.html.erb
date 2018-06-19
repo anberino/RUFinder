@@ -3,7 +3,12 @@
 <table>
 
 	<% @friends.where(receiver_id: current_user.id).where(status: true).or(@friends.where(sender_id: current_user.id).where(status: true)).find_each do |f| %>
-				<tr id="friends"> <td> <%= (User.find_by(id: f.sender_id)).name %> <%= link_to "Remover", controller: 'friends', action: 'remove', request_id: f.id %> </td> </tr>
+				<% if f.sender_id == current_user.id %>
+					<% @id = f.receiver_id %>
+				<% else %>
+					<% @id = f.sender_id %>
+				<% end %>
+				<tr id="friends"> <td> <%= (User.find_by(id: @id)).name %> <%= link_to "Remover", controller: 'friends', action: 'remove', request_id: f.id %> </td> </tr>
 	<% end %>
 
 </table>
