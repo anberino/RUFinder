@@ -1,4 +1,3 @@
-<h1> Comidas cadastradas: </h1>
 <form class="search">
   <table class="filter">
     <tr>
@@ -10,47 +9,34 @@
     <tr>
 
       <td>
-          <input type="checkbox" name="restaurant" value="1" checked> Central<br>
-          <input type="checkbox" name="restaurant" value="2" checked> Física<br>
-          <input type="checkbox" name="restaurant" value="3" checked> Química<br>
-          <input type="checkbox" name="restaurant" value="4" checked> Prefeitura (PCO)
+          <input type="checkbox" name="restaurant" value="1"> Central<br>
+          <input type="checkbox" name="restaurant" value="2"> Física<br>
+          <input type="checkbox" name="restaurant" value="3"> Química<br>
+          <input type="checkbox" name="restaurant" value="4"> Prefeitura (PCO)
       </td>
 
       <td>
-          <input type="checkbox" name="category" value="Básico" checked> Básico<br>
-          <input type="checkbox" name="category" value="Carne" checked> Carne<br>
-          <input type="checkbox" name="category" value="PVT" checked> PVT<br>
-          <input type="checkbox" name="category" value="Básico" checked> Acompanhamento<br>
-          <input type="checkbox" name="category" value="Salada" checked> Salada<br>
-          <input type="checkbox" name="category" value="Sobremesa" checked> Sobremesa
+          <input type="checkbox" name="category" value="Básico"> Básico<br>
+          <input type="checkbox" name="category" value="Carne"> Carne<br>
+          <input type="checkbox" name="category" value="PVT"> PVT<br>
+          <input type="checkbox" name="category" value="Básico"> Acompanhamento<br>
+          <input type="checkbox" name="category" value="Salada"> Salada<br>
+          <input type="checkbox" name="category" value="Sobremesa"> Sobremesa
       </td>
       <td> 
         <p>Comida: <input type="text" name="regex" style="width: 80%;"></p><br>
+        <input type="submit" value="Pesquisar">
       </td>
 
     </tr>
   </table>
-  <br><input type="submit" value="Pesquisar">
 </form>
 
+<h1> Comidas cadastradas: </h1>
 <br>
 
-<table>
-  <tr>
-    <th> Nome </th>
-    <th> Categoria </th>
-    <th> Restaurante </th>
-  </tr>
-
-  <% @foods.each do |f|%>
-    <tr>
-      <td><%= link_to "#{f.name}", Food.find(f.id) %></td>
-      <td><%=f.category%></td>
-      <% x = Restaurant.find(f.restaurant_id) %>
-      <td><%=x.name%></td>
-    </tr>
-  <% end %>
-
+<table id="result">
+<%= render 'foods' %>
 </table>
 
 <a href=main>Voltar</a>
