@@ -16,4 +16,5 @@ module FoodsHelper
     end
     return review, media
   end
+
 end
