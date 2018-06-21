@@ -92,12 +92,14 @@ class FoodsController < ApplicationController
       	@query = locais.all
       end
 
-      if(params[:reg]!=nil)     
-        @query = @query.where("name ~* ?", "\.*#{params[:reg]}\.*")
+      if(params[:reg]!=nil)
+        rgx = params[:reg].strip
+        @query = @query.where("name ~* ?", "\.*#{rgx}\.*")
       end
 
     elsif(params[:reg]!=nil)
-      @query = Food.where("name ~* ?", "\.*#{params[:reg]}\.*")
+      rgx = params[:reg].strip
+      @query = Food.where("name ~* ?", "\.*#{rgx}\.*")
     else
       @query = Food.where(id: nil)
     end
