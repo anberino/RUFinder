@@ -21,3 +21,35 @@
 	text-align: left;
 	padding: 1%;
 }
+
+.side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+    text-align: right;
+}
+
+/* The bar container */
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+/* Individual bars */
+.bar-5 {height: 12px; background-color: #41b566;}
+.bar-4 {height: 12px; background-color: #86e640;}
+.bar-3 {height: 12px; background-color: #f1e655;}
+.bar-2 {height: 12px; background-color: #ea8400;}
+.bar-1 {height: 12px; background-color: #f44336;}

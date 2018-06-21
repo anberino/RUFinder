@@ -1,6 +1,7 @@
 <h1> <%= @food.name %> (<%= Restaurant.find(@food.restaurant_id).name %>) </h1>
 
-<% review,media = info(@food.id) %>
+<% review,media,distrib = info(@food.id) %>
+<% total = distrib.inject(0, :+) %>
 <%= link_to "Avaliar",{controller: 'reviews',action: 'create', food_id: @food.id},
         class:'button1'%>
 <h1>
@@ -11,8 +12,19 @@
 </div>
 </h1>
 <br>
+Baseado em <%= total %> avaliações.<br>
 <br>
-
+<table class="stats">
+  <% for i in 5.downto(1) %>
+  <tr>
+      <td><% starRating(i*2) do |htmlstr| %><%= htmlstr.html_safe %><% end %></td>
+      <td><div class="bar-<%=i%>"  style="width:<%=100*distrib[i].to_f/total %> ;"></div></td>
+      <td><%=distrib[i]%></td>
+  </tr>
+  <% end %>
+</table>
+<br>
+<br>
   <% for i in 0..review.length-1 %>
     <% if review[i].comment != "" %>
       <div class="comment">

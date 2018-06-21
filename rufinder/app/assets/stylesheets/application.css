@@ -33,6 +33,16 @@ table{
 	width: 100%;
 }
 
+table.stats{
+	text-align: center;
+	padding: 0.5em;
+	width: auto;
+	margin-left:auto;
+  margin-right:auto;
+}
+
+
+
 .menu{
 	background-color:#cceeff;
 
