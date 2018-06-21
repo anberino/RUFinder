@@ -33,7 +33,7 @@ def main()
 					card.each_with_index do |x,index|
 						x.gsub!(/\\+?\//,'/')								#Tranforma \\/ em /
 						x.gsub!(/\\+u(.{4})/) {|match| [$1.hex].pack('U*')}	#Transforma \u0000 em chars
-						x.gsub!(/Opção: /,'')								#Tira o Opção
+						x.gsub!(/Opç(ão|ões):\s*/,'')								#Tira o Opção
 						y = x.split(/\s*\/\s*/)								#Separa as comidas em /
 						y.each do |com| 
 							com.capitalize!
@@ -73,7 +73,7 @@ def main()
 					card.each_with_index do |x,index|
 						x.gsub!(/\\+?\//,'/')
 						x.gsub!(/\\+u(.{4})/) {|match| [$1.hex].pack('U*')}
-						x.gsub!(/Opção:\s*/,'')
+						x.gsub!(/Opç(ão|ões):\s*/,'')
 						y = x.split(/\s*\/\s*/)
 						y.each do |com| 
 							com.capitalize!

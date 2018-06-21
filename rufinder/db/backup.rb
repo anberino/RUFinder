@@ -3426,3 +3426,38 @@ Record.create(date:"2018-06-24", meal:"Almoço", food_id:"275")
 
 Record.create(date:"2018-06-24", meal:"Almoço", food_id:"142")
 
+Food.create(name:"Torta de espinafre", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-19", meal:"Almoço", food_id:"408")
+
+Food.create(name:"Rocambole de PVT", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-19", meal:"Jantar", food_id:"409")
+
+Record.create(date:"2018-06-20", meal:"Almoço", food_id:"15")
+
+Record.create(date:"2018-06-20", meal:"Jantar", food_id:"198")
+
+Record.create(date:"2018-06-20", meal:"Jantar", food_id:"25")
+
+Food.create(name:"Carne moída", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-21", meal:"Almoço", food_id:"410")
+
+Record.create(date:"2018-06-21", meal:"Almoço", food_id:"323")
+
+Food.create(name:"Polenta cremosa", category:"Acompanhamento",restaurant_id:"1")
+Record.create(date:"2018-06-21", meal:"Almoço", food_id:"411")
+
+Food.create(name:"Salada de repolho misto", category:"Salada",restaurant_id:"1")
+Record.create(date:"2018-06-21", meal:"Almoço", food_id:"412")
+
+Record.create(date:"2018-06-20", meal:"Almoço", food_id:"71")
+
+Record.create(date:"2018-06-19", meal:"Jantar", food_id:"101")
+
+Food.create(name:"Tiras de carne com molho roti ", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-20", meal:"Jantar", food_id:"413")
+
+Record.create(date:"2018-06-22", meal:"Jantar", food_id:"362")
+
+Food.create(name:"PVT com ervilha", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-21", meal:"Jantar", food_id:"414")
+
