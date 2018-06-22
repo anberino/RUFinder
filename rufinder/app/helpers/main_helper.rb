@@ -12,11 +12,24 @@ module MainHelper
 			nota[i] = 0
 		end
 
-		@records.where(meal: tipo).where(date: date).find_each do |r|
-			food = Food.find(r.food_id)
-			bandeja[food.restaurant_id-1].push(food)
-			review = Review.where(food_id: food.id).where(user_id: id).first
-			nota[food.restaurant_id-1] = nota[food.restaurant_id-1] + review.rating - 5 if !review.nil?
+		hoje = Food.none
+
+		1.upto(4) do | rest |
+
+			hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: "Básico").where.not("name ~* ?", "\.*(Refresco|Minipão)\.*").where(restaurant_id: rest).order("name ASC").first(3)
+
+			["Carne","PVT","Acompanhamento","Salada","Sobremesa"].each do | cat |
+				hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: cat).where(restaurant_id: rest).order("created_at DESC").first(1)
+			end
+
+			hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: "Básico").where("name ~* ?", "\.*(Refresco|Minipão)\.*").where(restaurant_id: rest).first(2)
+
+		end
+
+		hoje.each do |r|
+			bandeja[r.restaurant_id-1].push(r)
+			review = Review.where(food_id: r.id).where(user_id: id).first
+			nota[r.restaurant_id-1] = nota[r.restaurant_id-1] + review.rating - 5 if !review.nil?
 		end
 
 		0.upto(3) do |i|

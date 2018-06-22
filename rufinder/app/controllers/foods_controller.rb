@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   def index
   	if(current_user)
     	@foods = Food.all
-      @query = Food.where(id: nil)
+      @query = Food.none
     else
     	redirect_to root_path
     end
@@ -15,8 +15,8 @@ class FoodsController < ApplicationController
   def query
     if(params[:q] == "true")
 
-      @query = Food.where(id: nil)
-      locais = Food.where(id: nil)
+      @query = Food.none
+      locais = Food.none
       
       if(params[:id0] == "true")
           locais = locais.or(Food.where(restaurant_id: 1))
@@ -101,7 +101,7 @@ class FoodsController < ApplicationController
       rgx = params[:reg].strip
       @query = Food.where("name ~* ?", "\.*#{rgx}\.*")
     else
-      @query = Food.where(id: nil)
+      @query = Food.none
     end
 
     render '_foods', layout: false
