@@ -58,6 +58,19 @@
 
 }
 
+.button1 {
+    background-color:#00325d; /* Blue */
+    border: none;
+    color: white;
+    padding:12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    opacity:1
+
+}
+
 .button1:hover {opacity: 0.6}
 
 .btnremove {
