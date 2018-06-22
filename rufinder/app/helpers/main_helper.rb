@@ -16,7 +16,7 @@ module MainHelper
 
 		1.upto(4) do | rest |
 
-			hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: "Básico").where.not("name ~* ?", "\.*(Refresco|Minipão)\.*").where(restaurant_id: rest).order("name ASC").first(3)
+			hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: "Básico").where(restaurant_id: rest).order("name ASC").first(3)
 
 			["Carne","PVT","Acompanhamento","Salada","Sobremesa"].each do | cat |
 				hoje = hoje + Food.joins(:records).where(records: {meal: tipo}).where(records: {date: date}).where(category: cat).where(restaurant_id: rest).order("created_at DESC").first(1)
