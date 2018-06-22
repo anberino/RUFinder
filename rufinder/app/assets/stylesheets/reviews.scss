@@ -30,7 +30,7 @@
 }
 
 .rating > label {
-  color: #929292;
+  color: #000;
  float: right;
 }
 
@@ -45,11 +45,11 @@
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
-.button1 {
-    background-color: #008CBA; /* Blue */
+.btnedit {
+    background-color:#7ab4c7; /* Blue */
     border: none;
     color: white;
-    padding: 7px 7px;
+    padding:1px 1px 2px 2px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -60,11 +60,10 @@
 
 .button1:hover {opacity: 0.6}
 
-.button2 {
-    background-color: #ec5237; /* Blue */
+.btnremove {
+    background-color: #fb5f5f; /* Blue */
     border: none;
     color: white;
-    padding: 7px 7px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

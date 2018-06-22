@@ -4,6 +4,10 @@ class RestaurantsController < ApplicationController
     	@restaurants = Restaurant.all
     else
     	redirect_to root_path
-    end 
+    end
+  end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
   end
 end

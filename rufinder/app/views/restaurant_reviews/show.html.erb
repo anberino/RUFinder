@@ -1,0 +1,24 @@
+<h1> Sua avaliação: </h1>
+<table>
+
+  <tr>
+    <th> Restaurante </th>
+    <th> Nota </th>
+    <th> Comentário </th>
+  </tr>
+
+    <tr>
+      <% u = User.find(@review.user_id) %>
+      <% x = Restaurant.find(@review.restaurant_id) %>
+      <td><%=x.name%></td>
+      <td class="rating">
+        <% starRating(@review.rating) do |htmlstr| %>
+          <%= htmlstr.html_safe %>
+        <% end %>
+      </td>
+      <td><%=@review.comment%></td>
+    </tr>
+
+</table>
+
+<%= link_to "Voltar", root_url %>

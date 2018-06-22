@@ -1,8 +1,8 @@
-<h1> <%= @food.name %> (<%=link_to Restaurant.find(@food.restaurant_id).name, controller:'restaurants',action:'show',id:@food.restaurant_id %>) </h1>
+<h1>Restaurante: <%= @restaurant.name %> </h1>
 
-<% review,media,distrib = info(@food.id) %>
+<% review,media,distrib = infoRest(@restaurant.id) %>
 <% total = distrib.inject(0, :+) %>
-<%= link_to "Avaliar",{controller: 'reviews',action: 'create', food_id: @food.id},
+<%= link_to "Avaliar",{controller: 'restaurant_reviews',action: 'create', restaurant_id: @restaurant.id},
         class:'button1'%>
 <h1>
   <div class="rating1">

@@ -18,11 +18,13 @@ Rails.application.routes.draw do
 
   post 'users/new', to: 'users#create'
   post 'reviews/new', to: 'reviews#create'
+  post 'restaurant_reviews/new', to: 'restaurant_reviews#create'
   resources :users
   resources :login
   resources :main
   resources :foods
   resources :reviews
+  resources :restaurant_reviews
   resources :restaurants
   resources :records
   resources :friends do
