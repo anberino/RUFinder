@@ -43,31 +43,3 @@ __- Fase 1:__  Modelos dos bancos de dados, CRUD básicos, esqueleto do site (ht
 __- Fase 2:__  Adicionar as principais funcionalidades propostas pelo nosso site: avaliar as refeições, comentários e sugestões
 
 __- Fase 3:__ Estilização do site (CSS), possível adição de funcionalidades extras, toques finais e correções de erros
-
-
-=======
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> 0b4ba6f40090b0fb78b2d7c8956761ae5369728e
