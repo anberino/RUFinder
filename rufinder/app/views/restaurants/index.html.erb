@@ -8,7 +8,7 @@
 
   <% @restaurants.each do |r|%>
     <tr>
-      <td><%=r.name %></td>
+      <td><%=link_to r.name, controller:'restaurants', action:'show', id: r.id %></td>
       <td><%=r.location %></td>
     </tr>
   <% end %>
