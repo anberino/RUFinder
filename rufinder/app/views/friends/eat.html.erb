@@ -2,8 +2,9 @@
 
 <%= form_tag controller: "friends", action: "selected", method: "post" do %>
   <table>
-
+    <% flag = 0 %>
     <% @friends.where(receiver_id: current_user.id).where(status: true).or(@friends.where(sender_id: current_user.id).where(status: true)).find_each do |f| %>
+        <% flag = 1 %>
         <% if f.sender_id == current_user.id %>
           <% @id = f.receiver_id %>
         <% else %>
@@ -16,8 +17,12 @@
         </td> </tr>
     <% end %>
 
+  <% if flag == 1 %>
   </table>
-  <%= submit_tag "Comer com amigos" %>
+      <%= submit_tag "Comer com amigos" %>
+  <% else %>
+      <p> Você não tem amigos. </p>
+  <% end %>
 <% end %>
 
 <p>
