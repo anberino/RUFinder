@@ -19,12 +19,12 @@
 
   <% if flag == 1 %>
   </table>
-      <%= submit_tag "Comer com amigos" %>
+      <%= submit_tag "Comer com amigos", class: 'submitbtn' %>
   <% else %>
       <p> Você não tem amigos. </p>
   <% end %>
 <% end %>
 
 <p>
-  <%= link_to "Voltar", root_path %>
+  <%= link_to "Voltar", root_path, class: 'backbtn' %>
 </p>
