@@ -10,7 +10,11 @@
       </ul>
     </div>
   <% end %>
-  
+
+<% if !@review.rating.nil? %>
+  <%= @review.rating %>
+  review não é nil
+    <%end%>
   <div class="field">
     <%= form.label :comentario, "Comentário:" %>
     <br>
@@ -24,38 +28,24 @@
   <span>Avaliação</span>
   <div class ="rating">
 
-    <%= radio_button_tag :rating, "10", false ,id: "star5", name: "review[rating]"  %>
-    <%= label_tag :star5, "", class: "full", for: "star5" %>
-
-    <%= radio_button_tag :rating, "9", false ,id: "star4half", name: "review[rating]" %>
-    <%= label_tag :star4half, "", class: "half", for: "star4half" %>
-
-    <%= radio_button_tag :rating, "8", false ,id: "star4", name: "review[rating]"  %>
-    <%= label_tag :star4, "", class: "full", for: "star4" %>
-
-    <%= radio_button_tag :rating, "7", false ,id: "star3half", name: "review[rating]"  %>
-    <%= label_tag :star3half, "", class: "half", for: "star3half" %>
-
-    <%= radio_button_tag :rating, "6", false ,id: "star3", name: "review[rating]"  %>
-    <%= label_tag :star3, "", class: "full", for: "star3" %>
-
-    <%= radio_button_tag :rating, "5", false ,id: "star2half", name: "review[rating]"  %>
-    <%= label_tag :star2half, "", class: "half", for: "star2half" %>
-
-    <%= radio_button_tag :rating, "4", false ,id: "star2", name: "review[rating]"  %>
-    <%= label_tag :star2, "", class: "full", for: "star2" %>
-
-    <%= radio_button_tag :rating, "3", false ,id: "star1half", name: "review[rating]"  %>
-    <%= label_tag :star1half, "", class: "half", for: "star1half" %>
-
-    <%= radio_button_tag :rating, "2", false ,id: "star1", name: "review[rating]"  %>
-    <%= label_tag :star1, "", class: "full", for: "star1" %>
-
-    <%= radio_button_tag :rating, "1", false ,id: "starhalf", name: "review[rating]"  %>
-    <%= label_tag :starhalf, "", class: "half", for: "starhalf" %>
-
-
-  </div>
+    <%for i in 10.downto(1) %>
+      <% if i % 2 == 0%>
+          <%if @review.rating.to_i == i%>
+            <%= radio_button_tag :rating, "#{i}", true ,id: "star#{i/2}", name: "review[rating]" %>
+          <%else%>
+            <%= radio_button_tag :rating, "#{i}", false ,id: "star#{i/2}", name: "review[rating]" %>
+          <%end%>
+          <%= label_tag "star#{i/2}", "", class: "full", for: "star#{i/2}" %>
+      <% else %>
+          <%if @review.rating.to_i == i%>
+            <%= radio_button_tag :rating, "#{i}", true ,id: "star#{(i/2).to_i}half", name: "review[rating]" %>
+          <%else%>
+            <%= radio_button_tag :rating, "#{i}", false ,id: "star#{(i/2).to_i}half", name: "review[rating]" %>
+          <%end%>
+          <%= label_tag "star#{(i/2).to_i}half", "", class: "half", for: "star#{(i/2).to_i}half" %>
+      <%end%>
+    <%end%>
+</div>
 
   <br>
   <div class="action">

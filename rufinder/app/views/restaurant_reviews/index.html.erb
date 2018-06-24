@@ -8,7 +8,7 @@
     <th> Ações      </th>
   </tr>
 
-  <% @reviews.where(user_id: current_user.id).each do |r|%>
+  <% RestaurantReview.where(user_id: current_user.id).each do |r|%>
     <tr>
       <% x = Restaurant.find(r.restaurant_id) %>
       <td><%=x.name%></td>
@@ -18,10 +18,10 @@
         <% end %>
       </td>
       <td><%=r.comment%></td>
-      <td><%= link_to "Editar",{controller: 'restaurant_reviews',action: 'edit', id: r.id},
-              class:'button1'%>
-          <%= link_to "Remover",r,method: :delete, data: {confirm: "Tem certeza que deseja excluir sua avaliação?"},id:r.id,
-              class:'button2'%>
+      <td><%= link_to image_tag("glyphicons-151-edit.png"),{controller: 'restaurant_reviews',action: 'edit', id: r.id},
+              class:'btnedit'%>
+          <%= link_to image_tag("glyphicons-198-remove-circle.png"),r,method: :delete, data: {confirm: "Tem certeza que deseja excluir sua avaliação?"},id:r.id,
+              class:'btnremove'%>
       </td>
     </tr>
   <% end %>
