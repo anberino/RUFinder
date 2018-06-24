@@ -2,10 +2,12 @@
 <center>
     <div style="height: 25%;"></div>
     <div class="login"><br>
-  	<h1><font color="black">RU-FINDER</font></h1>
 
-  	<%= link_to "Sign in with Usp", "/auth/google_oauth2", id: "sign_in" %>
+    <div>
+      <%= image_tag("RUlogo.png", :class => 'imglogin') %>
+    </div>
 
+  	<%= link_to "Entre com seu e-mail USP", "/auth/google_oauth2", id: "sign_in" %>
   	</form>
   </div>
 </center>

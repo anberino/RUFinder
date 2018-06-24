@@ -10,7 +10,7 @@
   <li><% if semana == 0 %> <b> Dom </b> <% else %> <%= link_to "Dom", "/main?dia=Dom" %> <%end%> </li>
 </ul>
 
-<%= link_to "Comer com amigos", controller: 'friends', action: 'eat' %>
+<p class="semana"> <%= link_to "Comer com amigos", controller: 'friends', action: 'eat' %> </p>
 
 <% ["Almoço","Jantar"].each do |tipo| %>
 
@@ -22,8 +22,8 @@
 <table>
 
   <tr>
-    <th> Central </th>
-    <th> Física </th>
+    <th class="subtitle"> Central </th>
+    <th class="subtitle"> Física </th>
   </tr>
 
 
@@ -49,8 +49,8 @@
 
 
   <tr>
-    <th> Química </th>
-    <th> Prefeitura (PCO) </th>
+    <th class="subtitle"> Química </th>
+    <th class="subtitle"> Prefeitura (PCO) </th>
   </tr>
 
   <tr>

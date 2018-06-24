@@ -4,10 +4,17 @@
 
 .std{
 
-	background-color:#ffffff;
+	background-color:#E4E4E4;
 
-	border: 1px solid black;
-	border-radius: 3%;
+	border-style: solid;
+
+  border-width: 3px;
+
+  border-color: #CACCCC;
+
+	box-shadow: 3px 5px #888888;
+
+	border-radius: 10px 10px;
 
 	line-height: 150%;
 
@@ -22,14 +29,21 @@
 }
 
 .best{
-	border: 3px solid #cccc00;
-	border-radius: 3%;
+	border-radius: 10px 10px;
+
+	border-width: 3px;
+
+	border-style: solid;
+
+  border-color: #5C8300;
+
+	box-shadow: 3px 5px #888888;
 
 	line-height: 150%;
 
 	padding: 0.5%;
 
-	background-color:#ffff99;
+	background-color:#84BC00;
 
 	font-weight: bold;
 
@@ -38,13 +52,13 @@
 
 .best a{
 	text-decoration: none;
-	color: #4D4D00;
+	color: #0A2E00;
 }
 
 .semana{
 	display: flex;
 	justify-content: space-around;
-	background-color: #e4efeb;
+	background-color: #D4DFE9;
 	list-style: none;
 	width: 100%;
 }
@@ -58,7 +72,7 @@
 .semana a{
 	text-decoration: none;
 	padding: 0.5em;
-	color: #0f714e;
+	color: #00162C;
 	display: block;
 }
 

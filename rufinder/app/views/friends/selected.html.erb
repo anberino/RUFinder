@@ -1,5 +1,5 @@
 <p> Você está comendo com amigos </p>
-<p> <%= link_to "Voltar", controller: 'friends', action: 'eat' %> </p>
+<p> <%= link_to "Voltar", eat_path, class: 'backbtn' %> </p>
 
 <% dia, semana = getDia(params[:dia]) %>
 

@@ -23,6 +23,7 @@ html{
 }
 
 body{
+    font: 14px georgia, sans-serif;
 	margin: 0;
     padding: 0;
 }
@@ -38,10 +39,13 @@ table.stats{
 	padding: 0.5em;
 	width: auto;
 	margin-left:auto;
-  margin-right:auto;
+    margin-right:auto;
 }
 
-
+a {
+  text-decoration: underline;
+  color: #00162C;
+}
 
 .menu{
 	background-color:#cceeff;
@@ -73,7 +77,7 @@ table.stats{
 input[type=text] {
     border: 2px solid grey;
     border-radius: 4px;
-		width: 30%;
+    width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -86,8 +90,8 @@ input[type=text] {
 	margin-left: 0.8%;
 	padding-top: 0.5%;
 	padding-bottom: 0.5%;
-  padding-right: 0.2%;
-  padding-left: 0.2%;
+    padding-right: 0.2%;
+    padding-left: 0.2%;
 	right: 1%;
 	min-width: 100px;
 	width: 10%;
@@ -101,22 +105,41 @@ input[type=text] {
 
 .submitbtn{
 
-			background-color: #4CAF50; /* Green */
-	    border: none;
-	    color: white;
-	    padding: 10px 22px;
-	    text-align: center;
-	    text-decoration: none;
-	    display: inline-block;
-	    font-size: 16px;
-			width: 30%;
-			margin-left: 35%;
-			margin-right: 35%;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
 }
 
 .submitbtn:hover{
 	opacity: 0.7;
 }
+
+.backbtn{
+    background-color: #CC1E35; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.backbtn:hover{
+  opacity: 0.7;
+}
+
 
 textarea {
     width: 30%;
@@ -134,7 +157,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #71c5ab;
+    background-color: #18646E;
 }
 
 li {
@@ -143,7 +166,7 @@ li {
 
 li a {
     display: block;
-    color: #000;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -154,7 +177,30 @@ li a {
     color: white;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #FFFFFF;
+    background-color: #2A838F;
+}
+
+h1 {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.subtitle {
+    font-family: 'Raleway',sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 36px;
+    margin: 0 0 24px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.imglogin {
+    width: 90%;
 }

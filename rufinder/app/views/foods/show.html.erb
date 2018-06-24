@@ -27,18 +27,20 @@ Baseado em <%= total %> avaliações.<br>
 <br>
   <% for i in 0..review.length-1 %>
     <% if review[i].comment != "" %>
-      <div class="comment">
-        <%= User.find(review[i].user_id).name %>
-        <br>
-          <% starRating(review[i].rating) do |htmlstr| %>
-            <%= htmlstr.html_safe %>
-          <% end %>
-          <%= review[i].created_at.strftime("%d/%m/%Y") %>
+      <div>
+        <div class="comment">
+          <%= User.find(review[i].user_id).name %>
           <br>
-        <%= review[i].comment %>
+            <% starRating(review[i].rating) do |htmlstr| %>
+              <%= htmlstr.html_safe %>
+            <% end %>
+            <%= review[i].created_at.strftime("%d/%m/%Y") %>
+            <br>
+          <%= review[i].comment %>
+        </div>
       </div>
       <br>
     <% end %>
 
   <% end %>
-<%= link_to "Voltar", root_url %>
+<%= link_to "Voltar", root_path, class: 'backbtn' %>
