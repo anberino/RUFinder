@@ -5,4 +5,5 @@ Feature: Review
 
   Scenario: View review page
       Given I am signed in with provider google
-      Then I should see "Review de bandejões feitas por você"
+      When I click "Avaliações"
+      Then I should see "Reviews de bandejões feitas por você"
