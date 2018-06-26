@@ -1,15 +1,9 @@
 <h1> Restaurantes: </h1>
 <table>
 
-  <tr>
-    <th> Nome </th>
-    <th> Local </th>
-  </tr>
-
   <% @restaurants.each do |r|%>
     <tr>
       <td><%=link_to r.name, controller:'restaurants', action:'show', id: r.id %></td>
-      <td><%=r.location %></td>
     </tr>
   <% end %>
 

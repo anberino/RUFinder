@@ -1,5 +1,15 @@
 <h1>Restaurante: <%= @restaurant.name %> </h1>
 
+<h3> Endereço:</h3> <p> <%= @restaurant.location %> </p>
+<h3> Horário:</h3> 
+<p> 
+  <% h = @restaurant.horario.split( /, */ ) %>
+  <% h.each do |str| %>
+    <p> <%= str %> </p>
+  <% end %>
+</p>
+<h3> Telefone:</h3> <p> <%= @restaurant.telefone %> </p>
+
 <% review,media,distrib = infoRest(@restaurant.id) %>
 <% total = distrib.inject(0, :+) %>
 <%= link_to "Avaliar",{controller: 'restaurant_reviews',action: 'create', restaurant_id: @restaurant.id},
