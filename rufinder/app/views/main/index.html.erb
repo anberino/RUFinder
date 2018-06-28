@@ -1,4 +1,4 @@
-<% @friends.where(status: false).where(receiver_id: current_user.id).find_each do |f| %>
+<% if !@friends.where(status: false).where(receiver_id: current_user.id).blank? %>
   <p><%= link_to "Você tem pedidos de amizade pendentes", controller: 'friends', action: 'index'%></p>
 <% end %>
 
