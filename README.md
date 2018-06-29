@@ -34,8 +34,16 @@ E o seguinte para inicializar o servidor local:
 
 Após isso, o site poderá ser visto localmente pelo navegador pela url http://localhost:3000/ .
 
+# Ambiente de produção:
 
+O projeto RUFinder já se encontra em plataforma de produção. O grupo está utilizando o __Heroku__ e o site pode ser visto através da url https://rufinder.herokuapp.com .
 
+# Como executar os testes
+
+Para executar os __testes de unidade__ (modelos) basta estar dentro da pasta rufinder e executar o seguinte comando no terminal:
+`rake spec`
+Para executar os __testes de integração__ basta estar dentro da pasta rufinder e executar o seguinte comando no terminal:
+`rake cucumber`
 # Entregas:
 
 __- Fase 1:__  Modelos dos bancos de dados, CRUD básicos, esqueleto do site (htmls da página inicial e formulários de acesso ao banco de dados)  
