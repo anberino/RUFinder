@@ -4,4 +4,7 @@ class HomeController < ApplicationController
       redirect_to main_index_path
     end
   end
+
+  def help
+  end
 end
