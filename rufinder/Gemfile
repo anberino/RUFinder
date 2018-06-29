@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Login via autenticação google
 gem "omniauth-google-oauth2", "~> 0.2.1"
+gem "chromedriver-helper", "1.0.0"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -44,6 +45,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'capybara-webkit'
   gem 'selenium-webdriver'
   gem 'rspec-rails'
   gem 'cucumber-rails', :require => false

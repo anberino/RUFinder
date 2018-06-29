@@ -1,5 +1,11 @@
 class RestaurantReviewsController < ApplicationController
-
+  def index
+    if(current_user)
+    else
+    	redirect_to root_path
+    end
+  end
+  
   def new
     @restaurant = Restaurant.find(params[:restaurant_id])
     @reviews = RestaurantReview.find_by(restaurant_id: @restaurant.id ,user_id: current_user.id)

@@ -10,5 +10,5 @@ Feature: Create RestaurantReview
       When I click "Restaurante Test"
       When I click "Avaliar"
       Then I should see "Avaliação"
-      When I fill the form and send it
+      When I fill the "restaurant_review" form and send it
       Then I should see "Sua avaliação"

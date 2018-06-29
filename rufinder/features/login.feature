@@ -9,5 +9,3 @@ Feature: login
 
 	Scenario: Attempt login
 		Given I am on the login page
-		When I click "Entre com seu e-mail USP"
-		Then I should see "Cardápio"

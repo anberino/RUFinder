@@ -6773,3 +6773,756 @@ Record.create(date:"2018-07-01", meal:"Almoço", food_id:"132")
 
 Record.create(date:"2018-07-01", meal:"Almoço", food_id:"133")
 
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"3")
+
+Food.create(name:"Salsicha com molho de tomate", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"502")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"43")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"6")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"7")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"8")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"1")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"2")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"3")
+
+Food.create(name:"Empanado de frango", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"503")
+
+Food.create(name:"Fricassê de PVT", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"504")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"36")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"217")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"194")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"9")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"10")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"3")
+
+Food.create(name:"Iscas de carne com molho à cigana", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"505")
+
+Food.create(name:"PVT à cigana", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"506")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"193")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"19")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"203")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"1")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"2")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"3")
+
+Food.create(name:"Contrafilé com molho ferrugem", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"507")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"27")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"23")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"24")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"20")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"9")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"10")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"3")
+
+Food.create(name:"Almôndegas com molho americano", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"508")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"192")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"317")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"7")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"29")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"3")
+
+Food.create(name:"Minifeijoada", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"509")
+
+Food.create(name:"Feijoada de legumes", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"510")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"216")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"431")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"20")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"1")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"2")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"3")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"337")
+
+Food.create(name:"PVT com tomate", category:"PVT",restaurant_id:"1")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"511")
+
+Food.create(name:"Batata sauté", category:"Acompanhamento",restaurant_id:"1")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"512")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"19")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"29")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"9")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"10")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"3")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"30")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"17")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"23")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"14")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"40")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"1")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"2")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"3")
+
+Food.create(name:"Filé de tilápia dourado", category:"Carne",restaurant_id:"1")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"513")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"31")
+
+Food.create(name:"Caponata de abobrinha", category:"Acompanhamento",restaurant_id:"1")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"514")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"14")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"40")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"9")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"10")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"1")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"2")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"3")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"34")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"339")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"220")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"207")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"29")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"9")
+
+Record.create(date:"2018-06-30", meal:"Almoço", food_id:"10")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"52")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"53")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"54")
+
+Food.create(name:"Cubos de carne com molho roti", category:"Carne",restaurant_id:"4")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"515")
+
+Food.create(name:"PVT com cenoura e milho", category:"PVT",restaurant_id:"4")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"516")
+
+Food.create(name:"Nhoque ao sugo", category:"Acompanhamento",restaurant_id:"4")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"517")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"58")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"59")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"60")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"61")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"52")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"53")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"54")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"447")
+
+Food.create(name:"PVT com mandioca", category:"PVT",restaurant_id:"4")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"518")
+
+Food.create(name:"Chucrute", category:"Acompanhamento",restaurant_id:"4")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"519")
+
+Food.create(name:"Salada de tomate", category:"Salada",restaurant_id:"4")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"520")
+
+Food.create(name:"Doce de leite com coco", category:"Sobremesa",restaurant_id:"4")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"521")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"60")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"61")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"52")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"53")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"54")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"221")
+
+Food.create(name:"Charuto de PVT", category:"PVT",restaurant_id:"4")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"522")
+
+Food.create(name:"Batata com ervas", category:"Acompanhamento",restaurant_id:"4")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"523")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"232")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"325")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"60")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"61")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"52")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"53")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"54")
+
+Food.create(name:"Filé de frango com molho de maracujá", category:"Carne",restaurant_id:"4")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"524")
+
+Food.create(name:"PVT com beterraba", category:"PVT",restaurant_id:"4")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"525")
+
+Food.create(name:"Berinjela refogada", category:"Acompanhamento",restaurant_id:"4")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"526")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"76")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"224")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"60")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"61")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"52")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"62")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"54")
+
+Food.create(name:"Bife de caçarola", category:"Carne",restaurant_id:"4")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"527")
+
+Food.create(name:"PVT com espinafre", category:"PVT",restaurant_id:"4")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"528")
+
+Food.create(name:"Legumes oriental", category:"Acompanhamento",restaurant_id:"4")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"529")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"66")
+
+Food.create(name:"Pudim de maria mole", category:"Sobremesa",restaurant_id:"4")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"530")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"60")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"61")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"83")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"84")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"85")
+
+Food.create(name:"Salsicha com molho de tomate", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"531")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"125")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"88")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"96")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"90")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"91")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"92")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"83")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"84")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"85")
+
+Food.create(name:"Quibe assado", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"532")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"104")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"118")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"89")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"102")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"91")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"92")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"83")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"84")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"85")
+
+Food.create(name:"Iscas de carne com molho à cigana", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"533")
+
+Food.create(name:"PVT à cigana", category:"PVT",restaurant_id:"2")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"534")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"243")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"101")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"107")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"91")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"92")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"83")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"84")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"85")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"373")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"109")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"105")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"106")
+
+Food.create(name:"Gelatina", category:"Sobremesa",restaurant_id:"2")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"535")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"91")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"92")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"83")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"84")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"85")
+
+Food.create(name:"Almôndegas com molho americano", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"536")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"242")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"250")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"89")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"111")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"91")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"92")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"83")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"84")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"85")
+
+Food.create(name:"Minifeijoada", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"537")
+
+Food.create(name:"Feijoada de PVT", category:"PVT",restaurant_id:"2")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"538")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"267")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"459")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"102")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"91")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"92")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"83")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"84")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"85")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"119")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"470")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"95")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"96")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"111")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"91")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"92")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"83")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"84")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"85")
+
+Food.create(name:"Iscas de carne com molho campana", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"539")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"87")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"372")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"89")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"90")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"91")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"92")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"83")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"84")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"85")
+
+Food.create(name:"Filé de tilápia dourado", category:"Carne",restaurant_id:"2")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"540")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"113")
+
+Food.create(name:"Batata doce sauté", category:"Acompanhamento",restaurant_id:"2")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"541")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"96")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"122")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"91")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"92")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"132")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"133")
+
+Food.create(name:"Almôndegas ao sugo", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"542")
+
+Food.create(name:"PVT com grão-de-bico", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"543")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"382")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"180")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"420")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-06-25", meal:"Almoço", food_id:"140")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"131")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"132")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"133")
+
+Food.create(name:"Peixe à portuguesa", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"544")
+
+Food.create(name:"Omelete com ricota e espinafre ", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"545")
+
+Food.create(name:"Brócolis ao alho ", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"546")
+
+Food.create(name:"Salada de acelga  ", category:"Salada",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"547")
+
+Food.create(name:"Barrinha de biscoito recheada c", category:"Sobremesa",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"548")
+
+Food.create(name:"Goiabada", category:"Sobremesa",restaurant_id:"3")
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"549")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"139")
+
+Record.create(date:"2018-06-25", meal:"Jantar", food_id:"140")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"156")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"133")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"187")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"418")
+
+Food.create(name:"Quibebe", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"550")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"170")
+
+Food.create(name:"Curau", category:"Sobremesa",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"551")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-06-26", meal:"Almoço", food_id:"140")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"131")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"156")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"133")
+
+Food.create(name:"Bife de contrafilé acebolado ", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"552")
+
+Food.create(name:"Rondeli de queijo c", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"553")
+
+Food.create(name:"PVT  ", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"554")
+
+Food.create(name:"Batata bolinha corada ", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"555")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"303")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"288")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"139")
+
+Record.create(date:"2018-06-26", meal:"Jantar", food_id:"140")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"132")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"133")
+
+Food.create(name:"Bife grelhado acebolado", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"556")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"147")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"189")
+
+Food.create(name:"Salada de cenoura ralada", category:"Salada",restaurant_id:"3")
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"557")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"161")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-06-27", meal:"Almoço", food_id:"140")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"132")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"133")
+
+Food.create(name:"Frango empanado", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"558")
+
+Food.create(name:"Hambúrguer de lentilha", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"559")
+
+Food.create(name:"Macarrão ao sugo", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"560")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"180")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"171")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-06-28", meal:"Almoço", food_id:"140")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"131")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"132")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"133")
+
+Food.create(name:"Lasanha à bolonhesa", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"561")
+
+Food.create(name:"PVT com azeitonas  ", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"562")
+
+Food.create(name:"Repolho à escabeche", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"563")
+
+Food.create(name:"Salada de beterraba ralada ", category:"Salada",restaurant_id:"3")
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"564")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"161")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"139")
+
+Record.create(date:"2018-06-28", meal:"Jantar", food_id:"140")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"132")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"133")
+
+Food.create(name:"Carne assada ao molho roti", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"565")
+
+Food.create(name:"PVT com azeitona", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"566")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"271")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"282")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"181")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-06-29", meal:"Almoço", food_id:"140")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"131")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"132")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"133")
+
+Food.create(name:"Filé de coxa grelhado ", category:"Carne",restaurant_id:"3")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"567")
+
+Food.create(name:"Fricassê de PVT", category:"PVT",restaurant_id:"3")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"568")
+
+Food.create(name:"Legumes sautê ", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"569")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"415")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"295")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"139")
+
+Record.create(date:"2018-06-29", meal:"Jantar", food_id:"140")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"131")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"132")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"133")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"167")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"188")
+
+Food.create(name:"Couve-flor ao alho", category:"Acompanhamento",restaurant_id:"3")
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"570")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"170")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"161")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"139")
+
+Record.create(date:"2018-07-01", meal:"Almoço", food_id:"140")
+
