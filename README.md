@@ -41,9 +41,13 @@ O projeto RUFinder já se encontra em plataforma de produção. O grupo está ut
 # Como executar os testes
 
 Para executar os __testes de unidade__ (modelos) basta estar dentro da pasta rufinder e executar o seguinte comando no terminal:
+
 `rake spec`
+
 Para executar os __testes de integração__ basta estar dentro da pasta rufinder e executar o seguinte comando no terminal:
+
 `rake cucumber`
+
 # Entregas:
 
 __- Fase 1:__  Modelos dos bancos de dados, CRUD básicos, esqueleto do site (htmls da página inicial e formulários de acesso ao banco de dados)  
