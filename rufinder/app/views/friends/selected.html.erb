@@ -1,80 +1,84 @@
-<p> Você está comendo com amigos </p>
-<p> <%= link_to "Voltar", eat_path, class: 'backbtn' %> </p>
+<% if @selec.nil? %>
+  <p> Você não selecionou nenhum amigo! </p>
+<% else %>
+  <p> Você está comendo com amigos </p>
+  <p> <%= link_to "Voltar", eat_path, class: 'backbtn' %> </p>
 
-<% dia, semana = getDia(params[:dia]) %>
+  <% dia, semana = getDia(params[:dia]) %>
 
-<% ["Almoço","Jantar"].each do |tipo| %>
+  <% ["Almoço","Jantar"].each do |tipo| %>
 
-  <% bandeja, nota = getFood(tipo,dia,current_user.id) %>
+    <% bandeja, nota = getFood(tipo,dia,current_user.id) %>
 
-  <% notatotal = nota.dup %>
+    <% notatotal = nota.dup %>
 
-  <% @selec.each do |id| %>
-    <% bandeja, nota = getFood(tipo,dia,id) %>
-    <% 0.upto(3) do |i| %>
-      <% notatotal[i] += nota[i] %>
-    <% end %>
-  <% end %>
-
-  <% max = notatotal.max %>
-
-<br><h1><%= tipo %></h1><br>
-
-<table>
-
-  <tr>
-    <th> Central </th>
-    <th> Física </th>
-  </tr>
-
-
-  <tr>
-
-    <% 0.upto(1) do |n| %>
-
-      <% if bandeja[n].size > 1 && max ==  notatotal[n] %>      <td class="best">
-      <% else %>                                           <td class="std">
-        <% end %>
-
-      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
-        <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
-        <br>
-     <% end %>
-      <% else %> Fechado <br>
-        <% end %>
-
-      </td>
+    <% @selec.each do |id| %>
+      <% bandeja, nota = getFood(tipo,dia,id) %>
+      <% 0.upto(3) do |i| %>
+        <% notatotal[i] += nota[i] %>
+      <% end %>
     <% end %>
 
-  </tr>
+    <% max = notatotal.max %>
+
+  <br><h1><%= tipo %></h1><br>
+
+  <table>
+
+    <tr>
+      <th> Central </th>
+      <th> Física </th>
+    </tr>
 
 
-  <tr>
-    <th> Química </th>
-    <th> Prefeitura (PCO) </th>
-  </tr>
+    <tr>
 
-  <tr>
+      <% 0.upto(1) do |n| %>
 
-    <% 2.upto(3) do |n| %>
+        <% if bandeja[n].size > 1 && max ==  notatotal[n] %>      <td class="best">
+        <% else %>                                           <td class="std">
+          <% end %>
 
-      <% if bandeja[n].size > 1 && max ==  notatotal[n] %>      <td class="best">
-      <% else %>                                           <td class="std">
-        <% end %>
+        <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
+          <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
+          <br>
+       <% end %>
+        <% else %> Fechado <br>
+          <% end %>
 
-      <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
-       <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
-       <br>
-     <% end %>
-      <% else %> Fechado <br>
-        <% end %>
+        </td>
+      <% end %>
 
-      </td>
-    <% end %>
+    </tr>
 
-  </tr>
 
-</table>
+    <tr>
+      <th> Química </th>
+      <th> Prefeitura (PCO) </th>
+    </tr>
+
+    <tr>
+
+      <% 2.upto(3) do |n| %>
+
+        <% if bandeja[n].size > 1 && max ==  notatotal[n] %>      <td class="best">
+        <% else %>                                           <td class="std">
+          <% end %>
+
+        <% if bandeja[n].size > 1 %> <% bandeja[n].each do |f| %>
+         <%= link_to f.name, controller: 'foods', action: 'show', id: f.id %>
+         <br>
+       <% end %>
+        <% else %> Fechado <br>
+          <% end %>
+
+        </td>
+      <% end %>
+
+    </tr>
+
+  </table>
+  <%end%>
+
+  <br><br><br>
 <%end%>
-
-<br><br><br>
