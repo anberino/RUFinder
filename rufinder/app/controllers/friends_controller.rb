@@ -37,7 +37,12 @@ class FriendsController < ApplicationController
 
   def selected
     @selec = params[:selected_ids]
+    if @selec.nil?
+      flash[:error] = "Você não selecionou amigos"
+      redirect_to eat_path
+    else
     @records = Record.all
+    end
   end
 
   def edit
